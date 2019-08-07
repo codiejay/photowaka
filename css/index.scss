@@ -1,0 +1,1036 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100
+
+
+}
+body{
+
+   
+
+
+
+   
+
+
+    $mainYellow: #EABC04;
+    $mainBlack: #424141;
+    $poppins: 'Poppins', sans-serif;
+
+    button{
+        background-color: white;
+        border: 2px solid $mainYellow;
+        cursor: pointer;
+        padding: 0.6em 2.3em;
+        font-size: 1em;
+        font-family: $poppins;
+        font-weight: 900;
+        border-radius: 200px;
+        color: $mainBlack;
+        margin-top: 0.5em;
+    }
+
+    #arrow{
+        color: #EABC04;
+        font-weight: bolder;
+        font-size: 1em;
+    }
+    background-color: white;
+    position: relative;
+
+    header{
+        position: fixed;
+        background-color: white;
+        top: 0;
+        width: 100%;
+        left: 0;
+        z-index: 3;
+
+        nav{
+            display: grid;
+            grid-template-columns: 30% 1fr;
+
+
+            .navImg{
+                width: 7em;
+                // padding: 1em 0.9em;
+                margin: 1em;
+                height: 7em;
+                background: url("../asset/PhotoWaka3.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .navItems{
+                padding: 3em 0.9em;
+
+                ul{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+
+                    li{
+                        list-style-type: none;
+                        color: $mainBlack;
+
+                        a{
+                            display: inline-block;
+                            text-decoration: none;
+                            color: $mainBlack;
+                            font-size: 1.2em;
+                            font-weight: lighter;
+                        }
+                    }
+
+                    li:nth-child(2){
+                        
+                    
+
+                        ul{
+                            display: none;
+                            // display: block;
+                            background-color: rgb(255, 255, 255);
+                            padding: 1.3em;
+                            box-shadow: 0px 0px 11px 1px rgba(234, 188, 4, 0.247);
+                            width: 30vw;
+                            margin-top: 1em;
+                            color: white;
+
+                            li{
+
+                                a{
+                                    display: block;
+                                    margin: 1em 0;
+                                }
+                            }
+                        }
+
+                       
+                    }
+
+                    li:nth-child(5){
+                        position: relative;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: all 0.4s ease-in;
+
+                        a{
+                            color:  $mainYellow;
+                            font-weight: bold;
+                        }
+
+                        &:hover{
+                            transform: scale(1.1)
+                        }
+                       
+                        &::before{
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            padding: 17px 0;
+                            border: 1px solid $mainYellow;
+                            display: block;
+                            top: -60%;
+                            box-shadow: 0px 8px 8px rgba(234, 188, 4, 0.19);
+                            border-radius: 1000px;
+                            position: absolute;
+                        }
+                    }
+
+                }
+            }
+        }
+       
+    }
+
+
+    main{
+
+
+        .showcase{
+            display: grid;
+            grid-template-columns: 60% 1fr;
+            margin: 14em 0;
+
+
+            .showcaseHeading{
+                padding-top: 20vh;
+                padding-left: 12px;
+                font-weight: 100;
+                font-size: 2.4em;
+                line-height: 2em;
+               
+                
+                span{
+                    margin: 0;
+                    font-weight: bold;
+                    font-family: 'Poppins', sans-serif;
+                    display: block;
+                    color: $mainYellow;
+                }
+            }
+
+            .showcaseImg{
+                position: relative;
+                width: 70vh;
+                height: 70vh;
+                border-radius: 1000px;
+                background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
+                background-size: cover;
+                &::before{
+                    width: 42vh;
+                    height: 42vh;
+                    border-radius: 1000px;
+                    z-index: -1;
+                    left: -22%;
+                    bottom: 20%;
+                    content: "";
+                    display: block;
+                    background-color: #424141;
+                    position: absolute;
+                    border: 3px solid wheat;
+                }
+
+                &::after{
+                    width: 42vh;
+                    height: 42vh;
+                    border-radius: 1000px;
+                    z-index: -1;
+                    right: 0;
+                    top: -10%;
+                    content: "";
+                    display: block;
+                    background-color: rgb(255, 205, 5);
+                    position: absolute;
+                  
+                }
+
+                
+            }
+
+
+
+        }
+
+
+        .core{
+            margin: 15em 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+
+            .coreCard{
+                text-align: center;
+                width: 90%;
+                margin: 0 auto;
+                position: relative;
+              
+                &::before{
+                    width: 90%;
+                    left: 5%;
+                    height: 130%;
+                    content: "";
+                    position: absolute;
+                    border: 0.8px solid $mainYellow;
+                    border-radius: 10px;
+                    display: block;
+                    top: 15%;
+                    z-index: -1;
+                }
+
+                h1{
+                
+                    color: $mainYellow;
+                    text-shadow: 1px 1px 4px rgba(234, 188, 4, 0.589);
+                    font-size: 1.8em;
+                    font-weight: lighter;
+                    margin-bottom: 1.4em
+                }
+
+                p{
+                    font-size: 1.3em;
+                    color: $mainBlack;
+                    width: 80%;
+                    margin: 0 auto;
+
+                }
+            }
+
+            .coreCard:nth-child(1){
+
+                .coreCardImg{
+                    border: 10px solid white;
+                    width: 90px;
+                    margin: 0 auto;
+                    height: 90px;
+                    border-radius: 1200px;
+                    background: $mainYellow;
+                    display: block;
+
+                    &::before{
+                        width: 100%;
+                        height: 100%;
+                        content: "";
+                        display: block;
+                        background: url("../asset/correctSign.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transform: scale(0.5)
+                    }
+                }
+            }
+
+            .coreCard:nth-child(2){
+
+                .coreCardImg{
+                    border: 10px solid white;
+                    width: 90px;
+                    margin: 0 auto;
+                    height: 90px;
+                    border-radius: 1200px;
+                    background: $mainYellow;
+                    display: block;
+
+                    &::before{
+                        width: 100%;
+                        height: 100%;
+                        content: "";
+                        display: block;
+                        background: url("../asset/loudspeaker.svg");
+                        background-size: contain;
+                        background-position: center;
+                        transform: scale(0.5);
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+
+            .coreCard:nth-child(3){
+
+                .coreCardImg{
+                    border: 10px solid white;
+                    width: 90px;
+                    margin: 0 auto;
+                    height: 90px;
+                    border-radius: 1200px;
+                    background: $mainYellow;
+                    display: block;
+
+                    &::before{
+                        width: 100%;
+                        height: 100%;
+                        content: "";
+                        display: block;
+                        background: url("../asset/community.svg");
+                        background-size: contain;
+                        background-position: center;
+                        transform: scale(0.5);
+                        background-repeat: no-repeat
+                    }
+                }
+            }
+        }
+
+
+        .founderBox{
+            background-color: #EABC04;
+            height: 110vh;
+            display: grid;
+            border-radius: 0px 0px 40em 40em;
+            grid-template-columns:  1fr 1.3fr;
+            
+
+            .founderImg{
+                width: 70vh;
+                height:  70vh;
+                background: linear-gradient(rgba(255, 255, 255, 0.192), rgba(234, 188, 4, 0.507)), url("../asset/founderIMG.jpg");
+                background-size: cover;
+                border-radius: 1000px;
+                margin: 3em auto 1em auto;
+                display: block;
+                position: relative;
+
+                &::before{
+                    width: 30px;
+                    height: 30px;
+                    content: "";
+                    display: block;
+                    background-color: rgb(255, 255, 255);
+                    position: absolute;
+                    border: 6px solid white;
+                }
+
+                
+                &::after{
+                    width: 30px;
+                    height: 30px;
+                    content: "";
+                    right: 0;
+                    top: 30%;
+                    display: block;
+                    background-color: rgb(255, 255, 255);
+                    animation: bounce infinite  3s alternate;
+                    position: absolute;
+                    
+                }
+
+            }
+
+            p{
+                padding-top: 30vh;
+                font-size: 1.3em;
+                color: white;
+                position: relative;
+
+                    span{
+                        display: block;
+                        font-weight: 900;
+                        font-size: 2.5em;
+                    }
+                    
+
+                    &::before{
+                        content: ' " ';
+                        width: 30px;
+                        height: 30px;
+                        font-family: 'Ruge Boogie', cursive;
+                        font-size: 33em;
+                        position: absolute;
+                        color: white;
+                        top: -4%;
+                        z-index: 0.1;
+                        opacity: 0.3;
+                       
+                        display: block;
+                    }
+            }
+
+
+        }
+
+
+        .cards{
+            width: 90%;
+            margin: 3em auto;
+
+            .postCards{
+                margin: 15em 0;
+                display: grid;
+                grid-template-columns: 1fr 1.4fr;
+                grid-column-gap: 1.3em;
+
+               
+
+                .postCardsText{
+                    padding-top: 10vh;
+                    
+                    h1{
+                        font-size: 2.8em;
+                        width: 35%;
+                        font-weight: 900;
+                        color: $mainYellow;
+                    }
+
+                    p{
+                        color: $mainBlack;
+                        font-size: 1.4em;
+                        line-height: 1.7em;
+                        width: 80%;
+                        margin: 1em 0;
+                    }
+
+                    button{
+                        background-color: white;
+                        border: 2px solid $mainYellow;
+                        cursor: pointer;
+                        padding: 0.6em 2.3em;
+                        font-size: 1em;
+                        font-family: $poppins;
+                        font-weight: 900;
+                        border-radius: 200px;
+                        color: $mainBlack;
+                        margin-top: 0.5em;
+                    }
+                }
+            }
+
+            .postCards{ 
+
+                .journeyImg{
+                    width: 450px;
+                    height: 450px;
+                    background: linear-gradient(white, rgba(234, 188, 4, 0.562)), url("../asset/theJourney.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 2000px;
+                    position: relative;
+
+                        &::before{
+                            width: 400px;
+                            height: 400px;
+                            left: -4%;
+                            border-radius: 2000px;
+                            z-index: -2;
+                            background-color: rgb(255, 223, 95);
+                            content: "";
+                            display: block;
+                            position: absolute;
+                        }
+                }
+
+                .wakaImg{
+                    width: 450px;
+                    height: 450px;
+                    background: linear-gradient(white, rgba(234, 188, 4, 0.562)), url("../asset/theWaka.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 2000px;
+                    position: relative;
+
+                        &::before{
+                            width: 400px;
+                            height: 400px;
+                            border-radius: 2000px;
+                            z-index: -2;
+                            background-color: #EABC04;
+                            content: "";
+                            left: -5%;
+                            top: -4%;
+                            display: block;
+                            position: absolute;
+                        }
+                }
+
+                .masterClassImg{
+                    width: 450px;
+                    height: 450px;
+                    background: linear-gradient(white, rgba(234, 188, 4, 0.562)), url("../asset/theClass.jpg");
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 2000px;
+                    position: relative;
+
+                        &::before{
+                            width: 400px;
+                            height: 400px;
+                            left: -2%;
+                            top: 6%;
+                            border-radius: 2000px;
+                            z-index: -2;
+                            background-color: #EABC04;
+                            content: "";
+                            display: block;
+                            position: absolute;
+                        }
+                }
+
+
+            }
+    }
+
+
+    .testimony{
+        padding-left: 12px;
+        width: 80%;
+        margin: 9em auto;
+
+        h1:nth-child(1){
+            font-size: 2.8em;
+            color: $mainBlack;
+            font-weight: 900;
+            width: 40%;
+            margin: 2em 0;
+            position: relative;
+
+                &::before{
+                    width: 40%;
+                    height: 5px;
+                    background-color: $mainYellow;
+                    content: "";
+                    display: block;
+                    bottom: 0;
+                    position: absolute;
+                }
+            
+
+        }
+
+        .testimonies{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 3em 2em;
+            
+
+            .testimonyCard{
+
+                
+
+                h1{
+                    font-weight: 900;
+                    font-size: 1.6em;
+                    position: relative;
+                    margin-bottom: 0.8em;
+                    color: #424141;
+
+                    &::before{
+                        content: ' " ';
+                        width: 30px;
+                        height: 30px;
+                        font-family: 'Ruge Boogie', cursive;
+                        font-size: 18em;
+                        position: absolute;
+                        color: $mainYellow;
+                        top: -282%;
+                        right: 50%;
+                        z-index: 0.1;
+                        opacity: 0.3;
+                        display: block;
+                    }
+
+                }
+
+                p{
+                    color: $mainBlack;
+                    font-size: 1.1em;
+                    width: 80%;
+                }
+                
+            }
+
+            .testimonyCard:nth-child(1){
+                
+                .testimonyCardImg{
+                    width: 6em;
+                    height: 6em;
+                    background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/tola.jpg");
+                    background-size: cover;
+                    border-radius: 2000px;
+                }
+            }
+
+            .testimonyCard:nth-child(2){
+                
+                .testimonyCardImg{
+                    width: 6em;
+                    height: 6em;
+                    background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/bimbo.jpg");
+                    background-size: cover;
+                    border-radius: 2000px;
+                }
+            }
+
+            .testimonyCard:nth-child(3){
+                
+                .testimonyCardImg{
+                    width: 6em;
+                    height: 6em;
+                    background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/gift.jpg");
+                    background-size: cover;
+                    border-radius: 2000px;
+                }
+            }
+
+            .testimonyCard:nth-child(4){
+                
+                .testimonyCardImg{
+                    width: 6em;
+                    height: 6em;
+                    background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/jackAdams.jpg");
+                    background-size: cover;
+                    border-radius: 2000px;
+                }
+            }
+        }
+
+    }
+
+
+    .actionCard{
+        padding-left: 12px;
+        margin: 5em 0;
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+
+        .actionCardImg{
+            width: 35em;
+            margin: 0 auto;
+            display: block;
+            height: 35em;
+            background: linear-gradient(rgba(255, 255, 255, 0.637), rgba(234, 188, 4, 0.63)), url("../asset/founderBehond.JPG");
+            background-position: center;
+            background-size: cover;
+            clip-path: polygon(0 0, 82% 16%, 78% 100%, 0 100%, 0% 38%);
+            border-radius: 200px;
+        }
+
+        .actionCardText{
+            padding-top: 20vh;
+
+            h1{
+                font-weight: 900;
+                font-size: 2.7em;
+                color: $mainBlack;
+            }
+
+            p{
+                width: 60%;
+                font-size: 1.42em;
+            }
+
+            span{
+                display: block;
+                margin: 1.42em 0;
+                color: $mainYellow;
+                    b{
+                        font-weight: 600;
+                        cursor: pointer;
+                    }
+            }
+        }
+    }
+
+
+    .teamBox{
+
+       padding-left: 12px;
+
+        h1:nth-child(1){
+            font-size: 2.8em;
+            color: $mainBlack;
+            font-weight: 900;
+            width: 40%;
+            margin: 2em 0;
+            position: relative;
+
+                &::before{
+                    width: 40%;
+                    height: 5px;
+                    background-color: $mainYellow;
+                    content: "";
+                    display: block;
+                    bottom: 0;
+                    position: absolute;
+                }
+            
+
+        }
+
+        .botBox, .directorBox, .executiveBox{
+            text-align: center;
+
+            h1:nth-child(1){
+                font-size: 1.8em;
+                text-align: left;
+                color: $mainBlack;
+                font-weight: 900;
+                width: 40%;
+                margin: 2em 0;
+                position: relative;
+    
+                    &::before{
+                        width: 40%;
+                        height: 5px;
+                        background-color: $mainYellow;
+                        content: "";
+                        display: block;
+                        bottom: 0;
+                        position: absolute;
+                    }
+                
+    
+            }
+
+            .bot, .executive, .director {
+                text-align: left;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 90%;
+                margin: 2em auto;
+
+                .botCard, .executiveCard, .directorCard{
+
+                    
+
+                    h1{
+                        font-size: 1.3em;
+                        font-weight: 900;
+                        color: $mainBlack;
+
+                    }
+
+                    span{
+                        color: $mainYellow
+                    }
+                }
+
+                .botCard:nth-child(1) , .executiveCard:nth-child(1), 
+                .directorCard:nth-child(1){
+                   
+                    .botCardImg, .executiveCardImg, .directorCardImg {
+                        width: 5em; 
+                        height: 5em;
+                        background: linear-gradient(rgba(255, 255, 255, 0.404), rgba(234, 188, 4, 0.336)) , url("../asset/Ubong\ King.jpeg");
+                        background-position: center;
+                        background-size: cover;
+                        border-radius: 200px;
+
+                    }
+                }
+
+                .botCard:nth-child(2), .executiveCard:nth-child(2),
+                .directorCard:nth-child(2){
+                   
+                    .botCardImg, .executiveCardImg, .directorCardImg{
+                        width: 5em; 
+                        height: 5em;
+                        background: linear-gradient(rgba(255, 255, 255, 0.404), rgba(234, 188, 4, 0.336)) , url("../asset/otega.jpeg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 200px;
+
+                    }
+                }
+
+                .botCard:nth-child(3), .executiveCard:nth-child(3),
+                .directorCard:nth-child(3){
+                   
+                    .botCardImg, .executiveCardImg, .directorCardImg{
+                        width: 5em; 
+                        height: 5em;
+                        background: linear-gradient(rgba(255, 255, 255, 0.404), rgba(234, 188, 4, 0.336)) , url("../asset/Neye\ Oluwole.jpeg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        border-radius: 200px;
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+    .patner{
+
+        padding-left: 12px;
+        text-align: center;
+        margin-bottom: 3em;
+        
+        h1:nth-child(1){
+            font-size: 1.8em;
+            text-align: left;
+            color: $mainBlack;
+            font-weight: 900;
+            width: 40%;
+            margin: 2em 0;
+            position: relative;
+
+                &::before{
+                    width: 40%;
+                    height: 5px;
+                    background-color: $mainYellow;
+                    content: "";
+                    display: block;
+                    bottom: 0;
+                    position: absolute;
+                }
+            
+
+        }
+
+        .patnerImgs{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 2.4em;
+            width: 60%;
+            margin: 0 auto;
+
+            .patnerLogo{
+                width: 10em;
+                padding: 1em;
+                height: 10em;
+                border-radius: 10px;
+            }
+
+
+            .patnerLogo:nth-child(1){
+                background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/bolt.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .patnerLogo:nth-child(2){
+                background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/canon.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .patnerLogo:nth-child(3){
+                background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/samsung.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .patnerLogo:nth-child(4){
+                background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/partner-logo_agrico.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+
+
+
+    }
+
+
+    .newsLetter{
+        margin: 9em 0;
+        display: grid;
+    grid-template-columns: 1fr 1.4fr;
+        .newsLetterText{
+            padding-left: 2em;
+            background-color: #EABC04;
+            color: white;
+            padding: 12vh 2em;
+            clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+            border-radius: 9px;
+
+            h1{
+                font-weight: 900;
+                font-size: 3.1em;
+                line-height: 1.1em;
+            }
+
+            p{
+                margin-top: 2em;
+                font-size: 1.2em;
+                width: 70%;
+
+            }
+
+        }
+
+        .newsletterForm{
+            background-color: #000000;
+            padding: 12vh 3em;
+            border-radius: 9px;
+
+            input{
+                display: block;
+                background: white;
+                padding: 1.3em 2em;
+                margin: 1.5em 0;
+                width: 50%;
+                border-radius: 12px;
+
+            }
+            
+        }
+    }
+
+
+    }
+
+    footer{
+        background: linear-gradient(rgba(17, 17, 17, 0.863), rgba(0, 0, 0, 0.897)), url("../asset/PhotoWaka2.png");
+        background-size: cover;
+        background-position: center;
+        
+        color: white;
+        text-align: center;
+        
+        .footerContent{
+            padding: 30vh 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            .about, .join{
+                h1{
+                    font-size: 2.3em;
+                    font-weight: 900;
+
+                }
+
+                ul{
+                    width: 20%;
+                    margin: 0 auto;
+                   li{
+                       text-align: left;
+                       list-style-type: square;
+
+                       a{
+                           color: white;
+                           font-size: 1.1em;
+                           margin: 1em 0;
+                           display: block;
+                       }
+                   }
+                }
+            }
+
+        }
+
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Animations;
+
+@keyframes bounce{
+    from{
+        transform: translate()
+    }
+
+    to{
+        transform: rotate(360deg) scale(0.6);
+   
+    }
+}

@@ -1,0 +1,997 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+}
+
+body {
+  background-color: white;
+  position: relative;
+}
+
+body button {
+  background-color: white;
+  border: 2px solid #EABC04;
+  cursor: pointer;
+  padding: 0.6em 2.3em;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  border-radius: 200px;
+  color: #424141;
+  margin-top: 0.5em;
+}
+
+body #arrow {
+  color: #EABC04;
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+body header {
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 3;
+}
+
+body header nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
+}
+
+body header nav .navImg {
+  width: 7em;
+  margin: 1em;
+  height: 7em;
+  background: url("../asset/PhotoWaka3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body header nav .navItems {
+  padding: 3em 0.9em;
+}
+
+body header nav .navItems ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+body header nav .navItems ul li {
+  list-style-type: none;
+  color: #424141;
+}
+
+body header nav .navItems ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #424141;
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
+body header nav .navItems ul li:nth-child(2) ul {
+  display: none;
+  background-color: white;
+  padding: 1.3em;
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(234, 188, 4, 0.247);
+          box-shadow: 0px 0px 11px 1px rgba(234, 188, 4, 0.247);
+  width: 30vw;
+  margin-top: 1em;
+  color: white;
+}
+
+body header nav .navItems ul li:nth-child(2) ul li a {
+  display: block;
+  margin: 1em 0;
+}
+
+body header nav .navItems ul li:nth-child(5) {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+body header nav .navItems ul li:nth-child(5) a {
+  color: #EABC04;
+  font-weight: bold;
+}
+
+body header nav .navItems ul li:nth-child(5):hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body header nav .navItems ul li:nth-child(5)::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  padding: 17px 0;
+  border: 1px solid #EABC04;
+  display: block;
+  top: -60%;
+  -webkit-box-shadow: 0px 8px 8px rgba(234, 188, 4, 0.19);
+          box-shadow: 0px 8px 8px rgba(234, 188, 4, 0.19);
+  border-radius: 1000px;
+  position: absolute;
+}
+
+body main .showcase {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 1fr;
+      grid-template-columns: 60% 1fr;
+  margin: 14em 0;
+}
+
+body main .showcase .showcaseHeading {
+  padding-top: 20vh;
+  padding-left: 12px;
+  font-weight: 100;
+  font-size: 2.4em;
+  line-height: 2em;
+}
+
+body main .showcase .showcaseHeading span {
+  margin: 0;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  color: #EABC04;
+}
+
+body main .showcase .showcaseImg {
+  position: relative;
+  width: 70vh;
+  height: 70vh;
+  border-radius: 1000px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 204, 0, 0.404))), url("../asset/showcase.jpeg");
+  background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
+  background-size: cover;
+}
+
+body main .showcase .showcaseImg::before {
+  width: 42vh;
+  height: 42vh;
+  border-radius: 1000px;
+  z-index: -1;
+  left: -22%;
+  bottom: 20%;
+  content: "";
+  display: block;
+  background-color: #424141;
+  position: absolute;
+  border: 3px solid wheat;
+}
+
+body main .showcase .showcaseImg::after {
+  width: 42vh;
+  height: 42vh;
+  border-radius: 1000px;
+  z-index: -1;
+  right: 0;
+  top: -10%;
+  content: "";
+  display: block;
+  background-color: #ffcd05;
+  position: absolute;
+}
+
+body main .core {
+  margin: 15em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+body main .core .coreCard {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+body main .core .coreCard::before {
+  width: 90%;
+  left: 5%;
+  height: 130%;
+  content: "";
+  position: absolute;
+  border: 0.8px solid #EABC04;
+  border-radius: 10px;
+  display: block;
+  top: 15%;
+  z-index: -1;
+}
+
+body main .core .coreCard h1 {
+  color: #EABC04;
+  text-shadow: 1px 1px 4px rgba(234, 188, 4, 0.589);
+  font-size: 1.8em;
+  font-weight: lighter;
+  margin-bottom: 1.4em;
+}
+
+body main .core .coreCard p {
+  font-size: 1.3em;
+  color: #424141;
+  width: 80%;
+  margin: 0 auto;
+}
+
+body main .core .coreCard:nth-child(1) .coreCardImg {
+  border: 10px solid white;
+  width: 90px;
+  margin: 0 auto;
+  height: 90px;
+  border-radius: 1200px;
+  background: #EABC04;
+  display: block;
+}
+
+body main .core .coreCard:nth-child(1) .coreCardImg::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background: url("../asset/correctSign.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+body main .core .coreCard:nth-child(2) .coreCardImg {
+  border: 10px solid white;
+  width: 90px;
+  margin: 0 auto;
+  height: 90px;
+  border-radius: 1200px;
+  background: #EABC04;
+  display: block;
+}
+
+body main .core .coreCard:nth-child(2) .coreCardImg::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background: url("../asset/loudspeaker.svg");
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background-repeat: no-repeat;
+}
+
+body main .core .coreCard:nth-child(3) .coreCardImg {
+  border: 10px solid white;
+  width: 90px;
+  margin: 0 auto;
+  height: 90px;
+  border-radius: 1200px;
+  background: #EABC04;
+  display: block;
+}
+
+body main .core .coreCard:nth-child(3) .coreCardImg::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background: url("../asset/community.svg");
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background-repeat: no-repeat;
+}
+
+body main .founderBox {
+  background-color: #EABC04;
+  height: 110vh;
+  display: -ms-grid;
+  display: grid;
+  border-radius: 0px 0px 40em 40em;
+  -ms-grid-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr 1.3fr;
+}
+
+body main .founderBox .founderImg {
+  width: 70vh;
+  height: 70vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.192)), to(rgba(234, 188, 4, 0.507))), url("../asset/founderIMG.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.192), rgba(234, 188, 4, 0.507)), url("../asset/founderIMG.jpg");
+  background-size: cover;
+  border-radius: 1000px;
+  margin: 3em auto 1em auto;
+  display: block;
+  position: relative;
+}
+
+body main .founderBox .founderImg::before {
+  width: 30px;
+  height: 30px;
+  content: "";
+  display: block;
+  background-color: white;
+  position: absolute;
+  border: 6px solid white;
+}
+
+body main .founderBox .founderImg::after {
+  width: 30px;
+  height: 30px;
+  content: "";
+  right: 0;
+  top: 30%;
+  display: block;
+  background-color: white;
+  -webkit-animation: bounce infinite  3s alternate;
+          animation: bounce infinite  3s alternate;
+  position: absolute;
+}
+
+body main .founderBox p {
+  padding-top: 30vh;
+  font-size: 1.3em;
+  color: white;
+  position: relative;
+}
+
+body main .founderBox p span {
+  display: block;
+  font-weight: 900;
+  font-size: 2.5em;
+}
+
+body main .founderBox p::before {
+  content: ' " ';
+  width: 30px;
+  height: 30px;
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 33em;
+  position: absolute;
+  color: white;
+  top: -4%;
+  z-index: 0.1;
+  opacity: 0.3;
+  display: block;
+}
+
+body main .cards {
+  width: 90%;
+  margin: 3em auto;
+}
+
+body main .cards .postCards {
+  margin: 15em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr 1.4fr;
+  grid-column-gap: 1.3em;
+}
+
+body main .cards .postCards .postCardsText {
+  padding-top: 10vh;
+}
+
+body main .cards .postCards .postCardsText h1 {
+  font-size: 2.8em;
+  width: 35%;
+  font-weight: 900;
+  color: #EABC04;
+}
+
+body main .cards .postCards .postCardsText p {
+  color: #424141;
+  font-size: 1.4em;
+  line-height: 1.7em;
+  width: 80%;
+  margin: 1em 0;
+}
+
+body main .cards .postCards .postCardsText button {
+  background-color: white;
+  border: 2px solid #EABC04;
+  cursor: pointer;
+  padding: 0.6em 2.3em;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  border-radius: 200px;
+  color: #424141;
+  margin-top: 0.5em;
+}
+
+body main .cards .postCards .journeyImg {
+  width: 450px;
+  height: 450px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(234, 188, 4, 0.562))), url("../asset/theJourney.jpg");
+  background: linear-gradient(white, rgba(234, 188, 4, 0.562)), url("../asset/theJourney.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 2000px;
+  position: relative;
+}
+
+body main .cards .postCards .journeyImg::before {
+  width: 400px;
+  height: 400px;
+  left: -4%;
+  border-radius: 2000px;
+  z-index: -2;
+  background-color: #ffdf5f;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+body main .cards .postCards .wakaImg {
+  width: 450px;
+  height: 450px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(234, 188, 4, 0.562))), url("../asset/theWaka.jpg");
+  background: linear-gradient(white, rgba(234, 188, 4, 0.562)), url("../asset/theWaka.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 2000px;
+  position: relative;
+}
+
+body main .cards .postCards .wakaImg::before {
+  width: 400px;
+  height: 400px;
+  border-radius: 2000px;
+  z-index: -2;
+  background-color: #EABC04;
+  content: "";
+  left: -5%;
+  top: -4%;
+  display: block;
+  position: absolute;
+}
+
+body main .cards .postCards .masterClassImg {
+  width: 450px;
+  height: 450px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(234, 188, 4, 0.562))), url("../asset/theClass.jpg");
+  background: linear-gradient(white, rgba(234, 188, 4, 0.562)), url("../asset/theClass.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 2000px;
+  position: relative;
+}
+
+body main .cards .postCards .masterClassImg::before {
+  width: 400px;
+  height: 400px;
+  left: -2%;
+  top: 6%;
+  border-radius: 2000px;
+  z-index: -2;
+  background-color: #EABC04;
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+body main .testimony {
+  padding-left: 12px;
+  width: 80%;
+  margin: 9em auto;
+}
+
+body main .testimony h1:nth-child(1) {
+  font-size: 2.8em;
+  color: #424141;
+  font-weight: 900;
+  width: 40%;
+  margin: 2em 0;
+  position: relative;
+}
+
+body main .testimony h1:nth-child(1)::before {
+  width: 40%;
+  height: 5px;
+  background-color: #EABC04;
+  content: "";
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+
+body main .testimony .testimonies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 3em 2em;
+}
+
+body main .testimony .testimonies .testimonyCard h1 {
+  font-weight: 900;
+  font-size: 1.6em;
+  position: relative;
+  margin-bottom: 0.8em;
+  color: #424141;
+}
+
+body main .testimony .testimonies .testimonyCard h1::before {
+  content: ' " ';
+  width: 30px;
+  height: 30px;
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 18em;
+  position: absolute;
+  color: #EABC04;
+  top: -282%;
+  right: 50%;
+  z-index: 0.1;
+  opacity: 0.3;
+  display: block;
+}
+
+body main .testimony .testimonies .testimonyCard p {
+  color: #424141;
+  font-size: 1.1em;
+  width: 80%;
+}
+
+body main .testimony .testimonies .testimonyCard:nth-child(1) .testimonyCardImg {
+  width: 6em;
+  height: 6em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.582)), to(rgba(234, 188, 4, 0.349))), url("../asset/tola.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/tola.jpg");
+  background-size: cover;
+  border-radius: 2000px;
+}
+
+body main .testimony .testimonies .testimonyCard:nth-child(2) .testimonyCardImg {
+  width: 6em;
+  height: 6em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.582)), to(rgba(234, 188, 4, 0.349))), url("../asset/bimbo.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/bimbo.jpg");
+  background-size: cover;
+  border-radius: 2000px;
+}
+
+body main .testimony .testimonies .testimonyCard:nth-child(3) .testimonyCardImg {
+  width: 6em;
+  height: 6em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.582)), to(rgba(234, 188, 4, 0.349))), url("../asset/gift.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/gift.jpg");
+  background-size: cover;
+  border-radius: 2000px;
+}
+
+body main .testimony .testimonies .testimonyCard:nth-child(4) .testimonyCardImg {
+  width: 6em;
+  height: 6em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.582)), to(rgba(234, 188, 4, 0.349))), url("../asset/jackAdams.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/jackAdams.jpg");
+  background-size: cover;
+  border-radius: 2000px;
+}
+
+body main .actionCard {
+  padding-left: 12px;
+  margin: 5em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr 1.4fr;
+}
+
+body main .actionCard .actionCardImg {
+  width: 35em;
+  margin: 0 auto;
+  display: block;
+  height: 35em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.637)), to(rgba(234, 188, 4, 0.63))), url("../asset/founderBehond.JPG");
+  background: linear-gradient(rgba(255, 255, 255, 0.637), rgba(234, 188, 4, 0.63)), url("../asset/founderBehond.JPG");
+  background-position: center;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 82% 16%, 78% 100%, 0 100%, 0% 38%);
+          clip-path: polygon(0 0, 82% 16%, 78% 100%, 0 100%, 0% 38%);
+  border-radius: 200px;
+}
+
+body main .actionCard .actionCardText {
+  padding-top: 20vh;
+}
+
+body main .actionCard .actionCardText h1 {
+  font-weight: 900;
+  font-size: 2.7em;
+  color: #424141;
+}
+
+body main .actionCard .actionCardText p {
+  width: 60%;
+  font-size: 1.42em;
+}
+
+body main .actionCard .actionCardText span {
+  display: block;
+  margin: 1.42em 0;
+  color: #EABC04;
+}
+
+body main .actionCard .actionCardText span b {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body main .teamBox {
+  padding-left: 12px;
+}
+
+body main .teamBox h1:nth-child(1) {
+  font-size: 2.8em;
+  color: #424141;
+  font-weight: 900;
+  width: 40%;
+  margin: 2em 0;
+  position: relative;
+}
+
+body main .teamBox h1:nth-child(1)::before {
+  width: 40%;
+  height: 5px;
+  background-color: #EABC04;
+  content: "";
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+
+body main .teamBox .botBox, body main .teamBox .directorBox, body main .teamBox .executiveBox {
+  text-align: center;
+}
+
+body main .teamBox .botBox h1:nth-child(1), body main .teamBox .directorBox h1:nth-child(1), body main .teamBox .executiveBox h1:nth-child(1) {
+  font-size: 1.8em;
+  text-align: left;
+  color: #424141;
+  font-weight: 900;
+  width: 40%;
+  margin: 2em 0;
+  position: relative;
+}
+
+body main .teamBox .botBox h1:nth-child(1)::before, body main .teamBox .directorBox h1:nth-child(1)::before, body main .teamBox .executiveBox h1:nth-child(1)::before {
+  width: 40%;
+  height: 5px;
+  background-color: #EABC04;
+  content: "";
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+
+body main .teamBox .botBox .bot, body main .teamBox .botBox .executive, body main .teamBox .botBox .director, body main .teamBox .directorBox .bot, body main .teamBox .directorBox .executive, body main .teamBox .directorBox .director, body main .teamBox .executiveBox .bot, body main .teamBox .executiveBox .executive, body main .teamBox .executiveBox .director {
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+  margin: 2em auto;
+}
+
+body main .teamBox .botBox .bot .botCard h1, body main .teamBox .botBox .bot .executiveCard h1, body main .teamBox .botBox .bot .directorCard h1, body main .teamBox .botBox .executive .botCard h1, body main .teamBox .botBox .executive .executiveCard h1, body main .teamBox .botBox .executive .directorCard h1, body main .teamBox .botBox .director .botCard h1, body main .teamBox .botBox .director .executiveCard h1, body main .teamBox .botBox .director .directorCard h1, body main .teamBox .directorBox .bot .botCard h1, body main .teamBox .directorBox .bot .executiveCard h1, body main .teamBox .directorBox .bot .directorCard h1, body main .teamBox .directorBox .executive .botCard h1, body main .teamBox .directorBox .executive .executiveCard h1, body main .teamBox .directorBox .executive .directorCard h1, body main .teamBox .directorBox .director .botCard h1, body main .teamBox .directorBox .director .executiveCard h1, body main .teamBox .directorBox .director .directorCard h1, body main .teamBox .executiveBox .bot .botCard h1, body main .teamBox .executiveBox .bot .executiveCard h1, body main .teamBox .executiveBox .bot .directorCard h1, body main .teamBox .executiveBox .executive .botCard h1, body main .teamBox .executiveBox .executive .executiveCard h1, body main .teamBox .executiveBox .executive .directorCard h1, body main .teamBox .executiveBox .director .botCard h1, body main .teamBox .executiveBox .director .executiveCard h1, body main .teamBox .executiveBox .director .directorCard h1 {
+  font-size: 1.3em;
+  font-weight: 900;
+  color: #424141;
+}
+
+body main .teamBox .botBox .bot .botCard span, body main .teamBox .botBox .bot .executiveCard span, body main .teamBox .botBox .bot .directorCard span, body main .teamBox .botBox .executive .botCard span, body main .teamBox .botBox .executive .executiveCard span, body main .teamBox .botBox .executive .directorCard span, body main .teamBox .botBox .director .botCard span, body main .teamBox .botBox .director .executiveCard span, body main .teamBox .botBox .director .directorCard span, body main .teamBox .directorBox .bot .botCard span, body main .teamBox .directorBox .bot .executiveCard span, body main .teamBox .directorBox .bot .directorCard span, body main .teamBox .directorBox .executive .botCard span, body main .teamBox .directorBox .executive .executiveCard span, body main .teamBox .directorBox .executive .directorCard span, body main .teamBox .directorBox .director .botCard span, body main .teamBox .directorBox .director .executiveCard span, body main .teamBox .directorBox .director .directorCard span, body main .teamBox .executiveBox .bot .botCard span, body main .teamBox .executiveBox .bot .executiveCard span, body main .teamBox .executiveBox .bot .directorCard span, body main .teamBox .executiveBox .executive .botCard span, body main .teamBox .executiveBox .executive .executiveCard span, body main .teamBox .executiveBox .executive .directorCard span, body main .teamBox .executiveBox .director .botCard span, body main .teamBox .executiveBox .director .executiveCard span, body main .teamBox .executiveBox .director .directorCard span {
+  color: #EABC04;
+}
+
+body main .teamBox .botBox .bot .botCard:nth-child(1) .botCardImg, body main .teamBox .botBox .bot .botCard:nth-child(1) .executiveCardImg, body main .teamBox .botBox .bot .botCard:nth-child(1) .directorCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(1) .botCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(1) .directorCardImg, body main .teamBox .botBox .executive .botCard:nth-child(1) .botCardImg, body main .teamBox .botBox .executive .botCard:nth-child(1) .executiveCardImg, body main .teamBox .botBox .executive .botCard:nth-child(1) .directorCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(1) .botCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(1) .directorCardImg, body main .teamBox .botBox .director .botCard:nth-child(1) .botCardImg, body main .teamBox .botBox .director .botCard:nth-child(1) .executiveCardImg, body main .teamBox .botBox .director .botCard:nth-child(1) .directorCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(1) .botCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(1) .directorCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(1) .botCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(1) .executiveCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(1) .directorCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(1) .botCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(1) .directorCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(1) .botCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(1) .executiveCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(1) .directorCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(1) .botCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(1) .directorCardImg, body main .teamBox .directorBox .director .botCard:nth-child(1) .botCardImg, body main .teamBox .directorBox .director .botCard:nth-child(1) .executiveCardImg, body main .teamBox .directorBox .director .botCard:nth-child(1) .directorCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(1) .botCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(1) .directorCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(1) .botCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(1) .executiveCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(1) .directorCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(1) .botCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(1) .directorCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(1) .botCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(1) .executiveCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(1) .directorCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(1) .botCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(1) .directorCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(1) .botCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(1) .executiveCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(1) .directorCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(1) .botCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(1) .executiveCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(1) .directorCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(1) .botCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(1) .executiveCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(1) .directorCardImg {
+  width: 5em;
+  height: 5em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.404)), to(rgba(234, 188, 4, 0.336))), url("../asset/Ubong King.jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.404), rgba(234, 188, 4, 0.336)), url("../asset/Ubong King.jpeg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 200px;
+}
+
+body main .teamBox .botBox .bot .botCard:nth-child(2) .botCardImg, body main .teamBox .botBox .bot .botCard:nth-child(2) .executiveCardImg, body main .teamBox .botBox .bot .botCard:nth-child(2) .directorCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(2) .botCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(2) .directorCardImg, body main .teamBox .botBox .executive .botCard:nth-child(2) .botCardImg, body main .teamBox .botBox .executive .botCard:nth-child(2) .executiveCardImg, body main .teamBox .botBox .executive .botCard:nth-child(2) .directorCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(2) .botCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(2) .directorCardImg, body main .teamBox .botBox .director .botCard:nth-child(2) .botCardImg, body main .teamBox .botBox .director .botCard:nth-child(2) .executiveCardImg, body main .teamBox .botBox .director .botCard:nth-child(2) .directorCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(2) .botCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(2) .directorCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(2) .botCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(2) .executiveCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(2) .directorCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(2) .botCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(2) .directorCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(2) .botCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(2) .executiveCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(2) .directorCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(2) .botCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(2) .directorCardImg, body main .teamBox .directorBox .director .botCard:nth-child(2) .botCardImg, body main .teamBox .directorBox .director .botCard:nth-child(2) .executiveCardImg, body main .teamBox .directorBox .director .botCard:nth-child(2) .directorCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(2) .botCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(2) .directorCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(2) .botCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(2) .executiveCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(2) .directorCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(2) .botCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(2) .directorCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(2) .botCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(2) .executiveCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(2) .directorCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(2) .botCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(2) .directorCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(2) .botCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(2) .executiveCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(2) .directorCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(2) .botCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(2) .executiveCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(2) .directorCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(2) .botCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(2) .executiveCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(2) .directorCardImg {
+  width: 5em;
+  height: 5em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.404)), to(rgba(234, 188, 4, 0.336))), url("../asset/otega.jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.404), rgba(234, 188, 4, 0.336)), url("../asset/otega.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 200px;
+}
+
+body main .teamBox .botBox .bot .botCard:nth-child(3) .botCardImg, body main .teamBox .botBox .bot .botCard:nth-child(3) .executiveCardImg, body main .teamBox .botBox .bot .botCard:nth-child(3) .directorCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(3) .botCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .botBox .bot .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .botBox .bot .directorCard:nth-child(3) .directorCardImg, body main .teamBox .botBox .executive .botCard:nth-child(3) .botCardImg, body main .teamBox .botBox .executive .botCard:nth-child(3) .executiveCardImg, body main .teamBox .botBox .executive .botCard:nth-child(3) .directorCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(3) .botCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .botBox .executive .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .botBox .executive .directorCard:nth-child(3) .directorCardImg, body main .teamBox .botBox .director .botCard:nth-child(3) .botCardImg, body main .teamBox .botBox .director .botCard:nth-child(3) .executiveCardImg, body main .teamBox .botBox .director .botCard:nth-child(3) .directorCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(3) .botCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .botBox .director .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .botBox .director .directorCard:nth-child(3) .directorCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(3) .botCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(3) .executiveCardImg, body main .teamBox .directorBox .bot .botCard:nth-child(3) .directorCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(3) .botCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .directorBox .bot .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .directorBox .bot .directorCard:nth-child(3) .directorCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(3) .botCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(3) .executiveCardImg, body main .teamBox .directorBox .executive .botCard:nth-child(3) .directorCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(3) .botCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .directorBox .executive .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .directorBox .executive .directorCard:nth-child(3) .directorCardImg, body main .teamBox .directorBox .director .botCard:nth-child(3) .botCardImg, body main .teamBox .directorBox .director .botCard:nth-child(3) .executiveCardImg, body main .teamBox .directorBox .director .botCard:nth-child(3) .directorCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(3) .botCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .directorBox .director .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .directorBox .director .directorCard:nth-child(3) .directorCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(3) .botCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(3) .executiveCardImg, body main .teamBox .executiveBox .bot .botCard:nth-child(3) .directorCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(3) .botCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .executiveBox .bot .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .executiveBox .bot .directorCard:nth-child(3) .directorCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(3) .botCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(3) .executiveCardImg, body main .teamBox .executiveBox .executive .botCard:nth-child(3) .directorCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(3) .botCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .executiveBox .executive .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .executiveBox .executive .directorCard:nth-child(3) .directorCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(3) .botCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(3) .executiveCardImg, body main .teamBox .executiveBox .director .botCard:nth-child(3) .directorCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(3) .botCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(3) .executiveCardImg, body main .teamBox .executiveBox .director .executiveCard:nth-child(3) .directorCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(3) .botCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(3) .executiveCardImg,
+body main .teamBox .executiveBox .director .directorCard:nth-child(3) .directorCardImg {
+  width: 5em;
+  height: 5em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.404)), to(rgba(234, 188, 4, 0.336))), url("../asset/Neye Oluwole.jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.404), rgba(234, 188, 4, 0.336)), url("../asset/Neye Oluwole.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 200px;
+}
+
+body main .patner {
+  padding-left: 12px;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+body main .patner h1:nth-child(1) {
+  font-size: 1.8em;
+  text-align: left;
+  color: #424141;
+  font-weight: 900;
+  width: 40%;
+  margin: 2em 0;
+  position: relative;
+}
+
+body main .patner h1:nth-child(1)::before {
+  width: 40%;
+  height: 5px;
+  background-color: #EABC04;
+  content: "";
+  display: block;
+  bottom: 0;
+  position: absolute;
+}
+
+body main .patner .patnerImgs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 2.4em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+body main .patner .patnerImgs .patnerLogo {
+  width: 10em;
+  padding: 1em;
+  height: 10em;
+  border-radius: 10px;
+}
+
+body main .patner .patnerImgs .patnerLogo:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.459)), to(rgba(234, 188, 4, 0.336))), url("../asset/bolt.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/bolt.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body main .patner .patnerImgs .patnerLogo:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.459)), to(rgba(234, 188, 4, 0.336))), url("../asset/canon.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/canon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body main .patner .patnerImgs .patnerLogo:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.459)), to(rgba(234, 188, 4, 0.336))), url("../asset/samsung.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/samsung.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body main .patner .patnerImgs .patnerLogo:nth-child(4) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.459)), to(rgba(234, 188, 4, 0.336))), url("../asset/partner-logo_agrico.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/partner-logo_agrico.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body main .newsLetter {
+  margin: 9em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr 1.4fr;
+}
+
+body main .newsLetter .newsLetterText {
+  padding-left: 2em;
+  background-color: #EABC04;
+  color: white;
+  padding: 12vh 2em;
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+          clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  border-radius: 9px;
+}
+
+body main .newsLetter .newsLetterText h1 {
+  font-weight: 900;
+  font-size: 3.1em;
+  line-height: 1.1em;
+}
+
+body main .newsLetter .newsLetterText p {
+  margin-top: 2em;
+  font-size: 1.2em;
+  width: 70%;
+}
+
+body main .newsLetter .newsletterForm {
+  background-color: #000000;
+  padding: 12vh 3em;
+  border-radius: 9px;
+}
+
+body main .newsLetter .newsletterForm input {
+  display: block;
+  background: white;
+  padding: 1.3em 2em;
+  margin: 1.5em 0;
+  width: 50%;
+  border-radius: 12px;
+}
+
+body footer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.863)), to(rgba(0, 0, 0, 0.897))), url("../asset/PhotoWaka2.png");
+  background: linear-gradient(rgba(17, 17, 17, 0.863), rgba(0, 0, 0, 0.897)), url("../asset/PhotoWaka2.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+body footer .footerContent {
+  padding: 30vh 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+body footer .footerContent .about h1, body footer .footerContent .join h1 {
+  font-size: 2.3em;
+  font-weight: 900;
+}
+
+body footer .footerContent .about ul, body footer .footerContent .join ul {
+  width: 20%;
+  margin: 0 auto;
+}
+
+body footer .footerContent .about ul li, body footer .footerContent .join ul li {
+  text-align: left;
+  list-style-type: square;
+}
+
+body footer .footerContent .about ul li a, body footer .footerContent .join ul li a {
+  color: white;
+  font-size: 1.1em;
+  margin: 1em 0;
+  display: block;
+}
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate();
+            transform: translate();
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(0.6);
+            transform: rotate(360deg) scale(0.6);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translate();
+            transform: translate();
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(0.6);
+            transform: rotate(360deg) scale(0.6);
+  }
+}
+/*# sourceMappingURL=index.css.map */
