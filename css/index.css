@@ -36,6 +36,7 @@ body header {
   width: 100%;
   left: 0;
   z-index: 3;
+  border-bottom: 1.3px solid #EABC04;
 }
 
 body header nav {
@@ -46,13 +47,16 @@ body header nav {
 }
 
 body header nav .navImg {
-  width: 7em;
+  width: 6em;
   margin: 1em;
-  height: 7em;
+  height: 6em;
   background: url("../asset/PhotoWaka3.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin-left: 5em;
 }
 
 body header nav .navItems {
@@ -64,11 +68,36 @@ body header nav .navItems ul {
   display: grid;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1em;
 }
 
 body header nav .navItems ul li {
   list-style-type: none;
   color: #424141;
+}
+
+body header nav .navItems ul li::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: 40%;
+  -webkit-transition: all 0.61s;
+  transition: all 0.61s;
+}
+
+body header nav .navItems ul li:hover::before {
+  content: "";
+  width: 8%;
+  height: 2px;
+  background-color: #eabc04;
+  display: block;
+  position: absolute;
+  bottom: 40%;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  z-index: -1;
 }
 
 body header nav .navItems ul li a {
@@ -111,6 +140,11 @@ body header nav .navItems ul li:nth-child(5) a {
 body header nav .navItems ul li:nth-child(5):hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  color: white;
+}
+
+body header nav .navItems ul li:nth-child(5):hover a {
+  color: white;
 }
 
 body header nav .navItems ul li:nth-child(5)::before {
@@ -127,20 +161,30 @@ body header nav .navItems ul li:nth-child(5)::before {
   position: absolute;
 }
 
+body header .mobileNav {
+  display: none;
+}
+
 body main .showcase {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 60% 1fr;
       grid-template-columns: 60% 1fr;
-  margin: 14em 0;
+  margin: 5em 0;
 }
 
 body main .showcase .showcaseHeading {
   padding-top: 20vh;
   padding-left: 12px;
-  font-weight: 100;
-  font-size: 2.4em;
+  font-weight: bolder;
+  font-size: 1.8em;
   line-height: 2em;
+  width: 50%;
+}
+
+body main .showcase .showcaseHeading h1 {
+  font-weight: bold;
+  color: #424141;
 }
 
 body main .showcase .showcaseHeading span {
@@ -149,6 +193,9 @@ body main .showcase .showcaseHeading span {
   font-family: 'Poppins', sans-serif;
   display: block;
   color: #EABC04;
+  font-size: 1.2em;
+  margin-top: 0.41em;
+  line-height: 1em;
 }
 
 body main .showcase .showcaseImg {
@@ -971,6 +1018,651 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
   font-size: 1.1em;
   margin: 1em 0;
   display: block;
+}
+
+/* Tablet */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    position: relative;
+  }
+  body header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 3fr;
+        grid-template-columns: 1fr 3fr;
+  }
+  body header nav {
+    display: none;
+  }
+  body header nav .navItems {
+    display: none;
+  }
+  body header .mobileNav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr 4fr;
+        grid-template-columns: 1.2fr 4fr;
+  }
+  body header .mobileNav .mobileMenuLogo {
+    width: 7em;
+    height: 7em;
+    background: url("../asset/PhotoWaka3.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.2em 1em;
+    padding: 0;
+  }
+  body header .mobileNav .burger {
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+  }
+  body header .mobileNav .burger .burgerItems {
+    padding-left: 66vw;
+    padding-top: 2em;
+    text-align: right;
+  }
+  body header .mobileNav .burger .burgerItems div {
+    text-align: center;
+    display: block;
+    width: 4em;
+    height: 0.19em;
+    margin: 0 auto 1em auto;
+    background-color: #EABC04;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body header .mobileNav .burger .burgerItems div:nth-child(3) {
+    width: 2em;
+    text-align: left;
+    margin: 0;
+  }
+  body .mobileMenuItem {
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 3px 0px #EABC04;
+            box-shadow: 0px 0px 3px 0px #EABC04;
+    width: 100%;
+    display: none;
+    padding: 4vh 4vh;
+    position: absolute;
+    top: 8vh;
+    z-index: 3;
+  }
+  body .mobileMenuItem ul li {
+    list-style-type: none;
+  }
+  body .mobileMenuItem ul li a {
+    text-decoration: none;
+    color: #424141;
+    font-size: 1.52em;
+    margin: 1.3em 0;
+    display: inline-block;
+    position: relative;
+  }
+  body .mobileMenuItem ul li a::before {
+    content: "";
+    width: 60%;
+    height: 2px;
+    background-color: #EABC04;
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+  body main .showcase {
+    display: block;
+    margin: 10em 0;
+    position: relative;
+  }
+  body main .showcase::before {
+    content: "";
+    width: 25vh;
+    right: 3%;
+    height: 25vh;
+    background-color: red;
+    border-radius: 1000px;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 204, 0, 0.404))), url("../asset/showcase.jpeg");
+    background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
+    background-size: cover;
+    display: block;
+    position: absolute;
+  }
+  body main .showcase::after {
+    content: "";
+    width: 8vh;
+    right: 3%;
+    height: 8vh;
+    top: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EABC04));
+    background: linear-gradient(white, #EABC04);
+    border-radius: 1000px;
+    display: block;
+    position: absolute;
+    animation: bounce 0.7s infinite alternate-reverse;
+  }
+  body main .showcase .showcaseHeading {
+    padding-top: 10vh;
+    font-size: 2em;
+    width: 50%;
+  }
+  body main .showcase .showcaseHeading h1 {
+    font-size: 1.4em;
+  }
+  body main .showcase .showcaseHeading span {
+    font-size: 1.5em;
+  }
+  body main .showcase .showcaseImg {
+    display: none;
+  }
+  body main .core {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  body main .core .coreCard {
+    margin-bottom: 12em;
+  }
+  body main .founderBox {
+    border-radius: 0px;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    height: 40vh;
+    border-radius: 0px 0px 40em 40em;
+  }
+  body main .founderBox .founderImg {
+    width: 25vh;
+    height: 25vh;
+    padding: 0.4em;
+  }
+  body main .founderBox p {
+    padding-top: 13vh;
+    margin-left: 1.4em;
+  }
+  body main .founderBox p::before {
+    top: 0%;
+    font-size: 20.2em;
+  }
+  body main .founderBox p span {
+    font-size: 2.3em;
+  }
+  body main .cards {
+    width: 100%;
+  }
+  body main .cards .postCards .postCardsText {
+    padding-top: 5vh;
+  }
+  body main .cards .postCards .postCardsText h1 {
+    width: 90%;
+  }
+  body main .cards .postCards .journeyImg {
+    width: 300px;
+    height: 300px;
+  }
+  body main .cards .postCards .journeyImg::before {
+    width: 240px;
+    height: 240px;
+  }
+  body main .cards .postCards .wakaImg {
+    width: 300px;
+    height: 300px;
+  }
+  body main .cards .postCards .wakaImg::before {
+    width: 240px;
+    height: 240px;
+  }
+  body main .cards .postCards .masterClassImg {
+    width: 300px;
+    height: 300px;
+  }
+  body main .cards .postCards .masterClassImg::before {
+    width: 240px;
+    height: 240px;
+  }
+  body main .testimony {
+    padding-left: 6px;
+    width: 100%;
+    margin: 2em auto;
+  }
+  body main .testimony h1:nth-child(1) {
+    width: 80%;
+  }
+  body main .testimony .testimonies .testimonyCard h1::before {
+    font-size: 8.6em;
+    top: -80%;
+  }
+  body main .actionCard {
+    margin: 10em 0;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+  body main .actionCard .actionCardImg {
+    width: 23em;
+    height: 23em;
+  }
+  body main .actionCard .actionCardText {
+    padding-top: 10vh;
+  }
+  body main .actionCard .actionCardText p {
+    width: 100%;
+  }
+  body main .teamBox h1:nth-child(1) {
+    width: 80%;
+  }
+  body main .patner {
+    padding: 6px;
+  }
+  body main .patner h1:nth-child(1) {
+    font-size: 3em;
+  }
+  body main .patner .patnerImgs {
+    width: 100%;
+    margin: 0 auto;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  body main .patner .patnerImgs .patnerLogo {
+    width: 10em;
+    height: 10em;
+    border-radius: 10px;
+    margin: 2em 0;
+  }
+  body main .newsLetter .newsLetterText h1 {
+    font-size: 2.2em;
+  }
+  body main .newsLetter .newsLetterText p {
+    width: 80%;
+  }
+  body footer .footerContent {
+    padding: 15vh 0;
+  }
+  body footer .footerContent .about ul, body footer .footerContent .join ul {
+    width: 40%;
+  }
+  .turnDown {
+    -webkit-transform: rotate(40deg) translateY(10px);
+            transform: rotate(40deg) translateY(10px);
+  }
+  .turnUp {
+    -webkit-transform: rotate(-40deg) translateY(-12px);
+            transform: rotate(-40deg) translateY(-12px);
+  }
+  .hideBurger {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  body {
+    position: relative;
+  }
+  body header nav {
+    display: none;
+  }
+  body header .mobileNav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.2fr 4fr;
+        grid-template-columns: 1.2fr 4fr;
+  }
+  body header .mobileNav .mobileMenuLogo {
+    width: 7em;
+    height: 7em;
+    background: url("../asset/PhotoWaka3.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0.2em 1em;
+    padding: 0;
+  }
+  body header .mobileNav .burger {
+    width: 100%;
+    text-align: right;
+    cursor: pointer;
+  }
+  body header .mobileNav .burger .burgerItems {
+    padding-left: 0;
+    padding-top: 2em;
+    padding-left: 20vh;
+  }
+  body header .mobileNav .burger .burgerItems div {
+    text-align: center;
+    display: block;
+    width: 4em;
+    height: 0.19em;
+    margin-bottom: 1em;
+    background-color: #EABC04;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+  }
+  body header .mobileNav .burger .burgerItems div:nth-child(3) {
+    width: 2em;
+    text-align: left;
+    margin: 0;
+  }
+  body .mobileMenuItem {
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 3px 0px #EABC04;
+            box-shadow: 0px 0px 3px 0px #EABC04;
+    width: 100%;
+    display: none;
+    padding: 4vh 4vh;
+    position: absolute;
+    top: 17vh;
+    z-index: 3;
+  }
+  body .mobileMenuItem ul li {
+    list-style-type: none;
+  }
+  body .mobileMenuItem ul li a {
+    text-decoration: none;
+    color: #424141;
+    font-size: 1.52em;
+    margin: 1.3em 0;
+    display: inline-block;
+    position: relative;
+  }
+  body .mobileMenuItem ul li a::before {
+    content: "";
+    width: 60%;
+    height: 2px;
+    background-color: #EABC04;
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+  body main .showcase {
+    display: block;
+    margin: 10em 0;
+    position: relative;
+  }
+  body main .showcase::before {
+    content: "";
+    width: 32vh;
+    right: 3%;
+    height: 32vh;
+    background-color: red;
+    border-radius: 1000px;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 204, 0, 0.404))), url("../asset/showcase.jpeg");
+    background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
+    background-size: cover;
+    display: block;
+    position: absolute;
+  }
+  body main .showcase::after {
+    content: "";
+    width: 8vh;
+    right: 3%;
+    height: 8vh;
+    top: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#EABC04));
+    background: linear-gradient(white, #EABC04);
+    border-radius: 1000px;
+    display: block;
+    position: absolute;
+    animation: bounce 0.7s infinite alternate-reverse;
+  }
+  body main .showcase .showcaseHeading {
+    width: 100%;
+  }
+  body main .showcase .showcaseHeading h1 {
+    font-size: 1.2em;
+  }
+  body main .showcase .showcaseHeading span {
+    font-size: 1em;
+  }
+  body main .showcase .showcaseImg {
+    display: none;
+  }
+  body main .core {
+    display: block;
+  }
+  body main .core .coreCard {
+    margin-bottom: 12em;
+  }
+  body main .founderBox {
+    border-radius: 0px;
+    display: block;
+    height: 120vh;
+    padding-top: 0.92em;
+    border-radius: 0px 0px 40em 40em;
+  }
+  body main .founderBox .founderImg {
+    width: 35vh;
+    height: 35vh;
+    padding: 0.4em;
+  }
+  body main .founderBox .founderImg::before {
+    width: 18px;
+    height: 18px;
+    content: "";
+    display: block;
+    background-color: white;
+    position: absolute;
+    border: 6px solid white;
+  }
+  body main .founderBox p {
+    padding-top: 13vh;
+    margin-left: 1.4em;
+    width: 90%;
+    margin: 0 auto;
+  }
+  body main .founderBox p::before {
+    top: 0%;
+    font-size: 20.2em;
+  }
+  body main .founderBox p span {
+    font-size: 1.3em;
+  }
+  body main .cards {
+    margin: 0 auto;
+  }
+  body main .cards .postCards {
+    margin: 7em 0;
+  }
+  body main .cards .postCards .postCardsText {
+    padding-top: 4vh;
+  }
+  body main .cards .postCards .postCardsText h1 {
+    font-size: 1.9em;
+    width: 100%;
+  }
+  body main .cards .postCards .postCardsText p {
+    font-size: 1.2em;
+    width: 100%;
+  }
+  body main .cards .postCards {
+    display: block;
+  }
+  body main .cards .postCards .journeyImg {
+    width: 230px;
+    height: 230px;
+  }
+  body main .cards .postCards .journeyImg::before {
+    width: 200px;
+    height: 200px;
+    left: -4%;
+    border-radius: 2000px;
+    z-index: -2;
+    background-color: #ffdf5f;
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  body main .cards .postCards .wakaImg {
+    width: 230px;
+    height: 230px;
+  }
+  body main .cards .postCards .wakaImg::before {
+    width: 200px;
+    height: 200px;
+    left: -4%;
+    border-radius: 2000px;
+    z-index: -2;
+    background-color: #ffdf5f;
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  body main .cards .postCards .masterClassImg {
+    width: 230px;
+    height: 230px;
+  }
+  body main .cards .postCards .masterClassImg::before {
+    width: 200px;
+    height: 200px;
+    left: -4%;
+    border-radius: 2000px;
+    z-index: -2;
+    background-color: #ffdf5f;
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  body main .testimony {
+    margin: 1em 0em;
+  }
+  body main .testimony h1:nth-child(1) {
+    width: 100%;
+    font-size: 1.8em;
+  }
+  body main .testimony .testimonies {
+    display: block;
+  }
+  body main .testimony .testimonies .testimonyCard {
+    width: 100%;
+    margin-bottom: 5em;
+  }
+  body main .testimony .testimonies .testimonyCard h1 {
+    font-size: 2.4em;
+    margin-bottom: 1em;
+  }
+  body main .testimony .testimonies .testimonyCard h1::before {
+    font-size: 10em;
+    top: -30%;
+    right: 20%;
+    opacity: 0.2;
+  }
+  body main .testimony .testimonies .testimonyCard p {
+    width: 100%;
+  }
+  body main .actionCard {
+    display: block;
+    position: relative;
+    text-align: left;
+  }
+  body main .actionCard .actionCardImg {
+    width: 34vh;
+    height: 34vh;
+    margin: 0;
+  }
+  body main .actionCard .actionCardText {
+    padding-top: 2em;
+  }
+  body main .actionCard .actionCardText h1 {
+    font-size: 2em;
+  }
+  body main .actionCard .actionCardText p {
+    width: 100%;
+  }
+  body main .actionCard .actionCardText span {
+    margin: 0.3em 0;
+  }
+  body main .teamBox h1:nth-child(1) {
+    font-size: 2em;
+    width: 100%;
+  }
+  body main .teamBox .botBox, body main .teamBox .directorBox, body main .teamBox .executiveBox {
+    text-align: center;
+  }
+  body main .teamBox .botBox h1:nth-child(1), body main .teamBox .directorBox h1:nth-child(1), body main .teamBox .executiveBox h1:nth-child(1) {
+    font-size: 1.3em;
+    text-align: left;
+    color: #424141;
+    font-weight: 900;
+    width: 100%;
+    margin: 2em 0;
+    position: relative;
+  }
+  body main .teamBox .botBox h1:nth-child(1)::before, body main .teamBox .directorBox h1:nth-child(1)::before, body main .teamBox .executiveBox h1:nth-child(1)::before {
+    width: 40%;
+    height: 5px;
+    background-color: #EABC04;
+    content: "";
+    display: block;
+    bottom: 0;
+    position: absolute;
+  }
+  body main .teamBox .botBox .bot, body main .teamBox .botBox .executive, body main .teamBox .botBox .director, body main .teamBox .directorBox .bot, body main .teamBox .directorBox .executive, body main .teamBox .directorBox .director, body main .teamBox .executiveBox .bot, body main .teamBox .executiveBox .executive, body main .teamBox .executiveBox .director {
+    text-align: left;
+    display: block;
+    width: 90%;
+    margin: 2em auto;
+  }
+  body main .teamBox .botBox .bot .botCard, body main .teamBox .botBox .bot .executiveCard, body main .teamBox .botBox .bot .directorCard, body main .teamBox .botBox .executive .botCard, body main .teamBox .botBox .executive .executiveCard, body main .teamBox .botBox .executive .directorCard, body main .teamBox .botBox .director .botCard, body main .teamBox .botBox .director .executiveCard, body main .teamBox .botBox .director .directorCard, body main .teamBox .directorBox .bot .botCard, body main .teamBox .directorBox .bot .executiveCard, body main .teamBox .directorBox .bot .directorCard, body main .teamBox .directorBox .executive .botCard, body main .teamBox .directorBox .executive .executiveCard, body main .teamBox .directorBox .executive .directorCard, body main .teamBox .directorBox .director .botCard, body main .teamBox .directorBox .director .executiveCard, body main .teamBox .directorBox .director .directorCard, body main .teamBox .executiveBox .bot .botCard, body main .teamBox .executiveBox .bot .executiveCard, body main .teamBox .executiveBox .bot .directorCard, body main .teamBox .executiveBox .executive .botCard, body main .teamBox .executiveBox .executive .executiveCard, body main .teamBox .executiveBox .executive .directorCard, body main .teamBox .executiveBox .director .botCard, body main .teamBox .executiveBox .director .executiveCard, body main .teamBox .executiveBox .director .directorCard {
+    margin: 2em 0;
+  }
+  body main .patner h1:nth-child(1) {
+    width: 100%;
+  }
+  body main .patner .patnerImgs {
+    display: block;
+    width: 90%;
+  }
+  body main .patner .patnerImgs .patnerLogo {
+    width: 13em;
+    padding: 0em;
+    height: 13em;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    border-radius: 10px;
+    margin: 3.2em auto;
+  }
+  body main .newsLetter {
+    display: block;
+    margin-bottom: 0;
+  }
+  body main .newsLetter .newsLetterText {
+    -webkit-clip-path: none;
+            clip-path: none;
+    border-radius: 0px;
+    padding: 7em 1em;
+  }
+  body main .newsLetter .newsletterForm {
+    border-radius: 0;
+  }
+  body main .newsLetter .newsletterForm input {
+    width: 90%;
+    padding: 0.4em 1.4em;
+  }
+  body footer {
+    text-align: left;
+    padding-left: 12px;
+  }
+  body footer .footerContent {
+    padding: 10vh 0;
+    display: block;
+  }
+  body footer .footerContent .about, body footer .footerContent .join {
+    margin: 2em 0;
+  }
+  body footer .footerContent .about ul, body footer .footerContent .join ul {
+    width: 100%;
+  }
+  body footer p {
+    font-size: 0.82em;
+    width: 100%;
+    padding: 1em 0;
+  }
+  body .turnDown {
+    -webkit-transform: rotate(40deg) translateY(10px);
+            transform: rotate(40deg) translateY(10px);
+  }
+  body .turnUp {
+    -webkit-transform: rotate(-40deg) translateY(-12px);
+            transform: rotate(-40deg) translateY(-12px);
+  }
+  body .hideBurger {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes bounce {

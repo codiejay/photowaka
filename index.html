@@ -10,6 +10,8 @@
         <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie&display=swap" rel="stylesheet"> 
     <!-- CSS -->
         <link rel="stylesheet" href="./css/index.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -22,12 +24,7 @@
                     </a></li>
 
                     <li><a href="">
-                        THE TEAM <span id="arrow"> &downarrow; </span>
-                        <ul>
-                            <li><a href="">Board Of Trustee</a></li>
-                            <li><a href="">Board of Directors</a></li>
-                            <li><a href="">Executive Members</a></li>
-                        </ul>
+                        THE TEAM <span id="arrow"></span>
                     </a></li>
 
                     <li><a href="">
@@ -45,13 +42,52 @@
                 </ul>
             </div>
         </nav>
+
+        <div class="mobileNav">
+            <div class="mobileMenuLogo"></div>
+            <div class="burger">
+                <div class="burgerItems">
+                    <div ></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+    
     </header>
+
+    <div class="mobileMenuItem">
+            <ul>
+                <li><a href="">
+                    ABOUT US
+                </a></li>
+
+                <li><a href="">
+                    THE TEAM <span id="arrow"></span>
+                </a></li>
+
+                <li><a href="">
+                    MEMBERS 
+                </a></li>
+
+                <li><a href="">
+                    OUR SHOP
+                </a></li>
+
+                <li><a href="">
+                    JOIN US.
+                </a></li>
+
+            </ul>
+    </div>
 
 
     <main>
         <div class="showcase">
             <div class="showcaseHeading">
-                <h1>THIS IS <span>PHOTOWAKA</span></h1>
+                <h1>THIS IS <span>PHOTOWAKA AFRICA</span></h1>
             </div>
 
             <div class="showcaseImg">
@@ -406,5 +442,19 @@
         </P>
     </footer>
    
+<script>
+$(".burger").on(
+    "click", () =>{ 
+        $("main").toggle();
+        $("footer").toggle();
+        $(".mobileMenuItem").toggle();
+        
+        $($( $(".burger").children()[0]).children()[0]).toggleClass("turnDown")
+        $($( $(".burger").children()[0]).children()[1]).toggleClass("turnUp");
+        $($( $(".burger").children()[0]).children()[2]).toggleClass("hideBurger")
+
+    }
+)
+</script>
 </body>
 </html>

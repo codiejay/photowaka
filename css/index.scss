@@ -2,17 +2,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    font-weight: 100
+    font-weight: 100;
+    
 
 
 }
 body{
-
-   
-
-
-
-   
 
 
     $mainYellow: #EABC04;
@@ -47,6 +42,8 @@ body{
         width: 100%;
         left: 0;
         z-index: 3;
+        border-bottom: 1.3px solid $mainYellow;
+        
 
         nav{
             display: grid;
@@ -54,14 +51,16 @@ body{
 
 
             .navImg{
-                width: 7em;
+                width: 6em;
                 // padding: 1em 0.9em;
                 margin: 1em;
-                height: 7em;
+                height: 6em;
                 background: url("../asset/PhotoWaka3.png");
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
+                transform: scale(1.5);
+                margin-left: 5em;
             }
 
             .navItems{
@@ -70,10 +69,45 @@ body{
                 ul{
                     display: grid;
                     grid-template-columns: repeat(5, 1fr);
+                    grid-column-gap: 1em;
+                   
 
                     li{
                         list-style-type: none;
                         color: $mainBlack;
+                      
+                        // background-color: red;
+
+                        &::before{
+                            content: "";
+                            width: 0%;
+                            height: 2px;
+                            display: block;
+                            position: absolute;
+                            bottom: 40%;
+                            transition: all 0.61s;
+                        }
+
+                        &:hover{
+
+                            
+
+                            
+                        &::before{
+                            content: "";
+                            width: 8%;
+                            height: 2px;
+                            background-color: rgb(234, 188, 4);
+                            display: block;
+                            position: absolute;
+                            bottom: 40%;
+                            transition: all 2s;
+                            z-index: -1;
+                        }
+
+                        }
+                        
+                   
 
                         a{
                             display: inline-block;
@@ -81,6 +115,8 @@ body{
                             color: $mainBlack;
                             font-size: 1.2em;
                             font-weight: lighter;
+
+                            
                         }
                     }
 
@@ -103,6 +139,7 @@ body{
                                 a{
                                     display: block;
                                     margin: 1em 0;
+
                                 }
                             }
                         }
@@ -119,10 +156,16 @@ body{
                         a{
                             color:  $mainYellow;
                             font-weight: bold;
+
                         }
 
                         &:hover{
-                            transform: scale(1.1)
+                            transform: scale(1.1);
+                            color: white;
+
+                            a{
+                                color: white;
+                            }
                         }
                        
                         &::before{
@@ -131,6 +174,7 @@ body{
                             height: 100%;
                             padding: 17px 0;
                             border: 1px solid $mainYellow;
+                            
                             display: block;
                             top: -60%;
                             box-shadow: 0px 8px 8px rgba(234, 188, 4, 0.19);
@@ -142,6 +186,11 @@ body{
                 }
             }
         }
+
+        .mobileNav{
+            display: none;
+           
+        }
        
     }
 
@@ -152,15 +201,21 @@ body{
         .showcase{
             display: grid;
             grid-template-columns: 60% 1fr;
-            margin: 14em 0;
+            margin: 5em 0;
 
 
             .showcaseHeading{
                 padding-top: 20vh;
                 padding-left: 12px;
-                font-weight: 100;
-                font-size: 2.4em;
+                font-weight: bolder;
+                font-size: 1.8em;
                 line-height: 2em;
+                width: 50%;
+
+                h1{
+                    font-weight: bold;
+                    color: $mainBlack;
+                }
                
                 
                 span{
@@ -169,6 +224,9 @@ body{
                     font-family: 'Poppins', sans-serif;
                     display: block;
                     color: $mainYellow;
+                    font-size: 1.2em;
+                    margin-top: 0.41em;
+                    line-height: 1em;
                 }
             }
 
@@ -986,7 +1044,926 @@ body{
 
 
 
+/* Tablet */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
+    body{
+        position: relative;
+        $mainYellow: #EABC04;
+        $mainBlack: #424141;
+        $poppins: 'Poppins', sans-serif;
+
+        header{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            
+            
+
+            nav{
+                display: none;
+
+                    .navItems{
+                        display: none;
+                    }
+            }
+
+            .mobileNav{
+              display: grid;
+              grid-template-columns: 1.2fr 4fr;
+
+               .mobileMenuLogo{
+                    width: 7em;;
+                    height: 7em;;
+                    background: url("../asset/PhotoWaka3.png");
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin: 0.2em 1em;
+                    padding: 0;
+               }
+
+               .burger{
+                   width: 100%;
+                   text-align: right;
+                   cursor: pointer;
+
+                   .burgerItems{
+                       padding-left: 66vw;
+                       padding-top: 2em;
+                       text-align: right;
+                   
+                       div{
+                           text-align: center;
+                           display: block;
+                           width: 4em;
+                           height: 0.19em;
+                           margin: 0 auto 1em auto;
+                           background-color: $mainYellow;
+                           transition: all 0.6s ease-in-out;
+                          
+                   
+                       }
+                   }
+
+                   .burgerItems{
+                        div:nth-child(3){
+                            width: 2em;
+                            text-align: left;
+                            margin: 0;
+                        }
+                   }
+
+               } 
+
+              
+            }
+
+           
+        }
+
+        .mobileMenuItem{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 3px 0px #EABC04;
+            width: 100%;
+            display: none;
+            padding: 4vh 4vh;
+            position: absolute;
+            top: 8vh;
+            z-index: 3;
+          
+
+            ul{
+                li{
+                    list-style-type: none;
+
+
+                    a{
+                        text-decoration: none;
+                        color: $mainBlack;
+                        font-size: 1.52em;
+                        margin: 1.3em 0;
+                        display: inline-block;
+                        position: relative;
+
+                            &::before{
+                                content: "";
+                                width: 60%;
+                                height: 2px;
+                                background-color: $mainYellow;
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                            }
+
+                    }
+                }
+            }
+        }
+
+        main{
+
+    
+            .showcase{
+
+                display: block;
+                margin: 10em 0;
+                position: relative;
+
+                &::before{
+                    content: "";
+                    width: 25vh;
+                    right: 3%;
+                    height: 25vh;
+                    background-color: red;
+                    border-radius: 1000px;
+                    background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
+                    background-size: cover;
+                    display: block;
+                    position: absolute;
+                  
+                }
+
+                &::after{
+                    content: "";
+                    width: 8vh;
+                    right: 3%;
+                    height: 8vh;
+                    top: 0;
+                    background: linear-gradient(white, $mainYellow);
+                    border-radius: 1000px;
+                    display: block;
+                    position: absolute;
+                    animation: bounce 0.7s infinite alternate-reverse;
+                  
+                   
+                }
+
+
+                .showcaseHeading{
+                    padding-top: 10vh;
+                    font-size: 2em;
+                   
+                    width: 50%;
+                    
+
+                    h1{
+                        font-size: 1.4em;
+                    }
+
+                    span{
+                        font-size: 1.5em;
+                    }
+                }
+
+
+               
+
+                    
+
+                    .showcaseImg{
+                       display: none;
+                    }
+            }
+
+            .core{
+                grid-template-columns: 1fr 1fr;
+
+                    .coreCard{
+                        margin-bottom: 12em;
+                    }
+            }
+
+            .founderBox{
+                border-radius: 0px;
+                grid-template-columns: 1fr 2fr;
+                height: 40vh;
+                border-radius: 0px 0px 40em 40em;
+
+
+                .founderImg{
+                    width: 25vh;
+                    height: 25vh;
+                    padding: 0.4em;
+                }
+
+                p{
+                    padding-top: 13vh;
+                    margin-left: 1.4em;
+
+                        &::before{
+                            top: 0%;
+                            font-size: 20.2em;
+                        }
+
+                        span{
+                            font-size: 2.3em;
+                        }
+                }
+
+                
+
+            }
+
+            .cards{
+                width: 100%;
+
+                .postCards{
+                    
+                    .postCardsText{
+                        padding-top: 5vh;
+
+                        h1{
+                            width: 90%;
+                        }
+                    }
+
+
+                }
+
+                .postCards{
+
+                    .journeyImg{
+                        width: 300px;
+                        height: 300px;
+                        &::before{
+                            width: 240px;
+                            height: 240px;
+                            
+                        }
+                    }
+
+                    .wakaImg{
+                        width: 300px;
+                        height: 300px;
+                        &::before{
+                            width: 240px;
+                            height: 240px;
+                            
+                        }
+                    }
+
+                    .masterClassImg{
+                        width: 300px;
+                        height: 300px;
+                        &::before{
+                            width: 240px;
+                            height: 240px;
+                            
+                        }
+                    }
+                }
+            }
+
+            .testimony{
+                padding-left: 6px;
+                width: 100%;
+                margin: 2em auto;
+
+                h1:nth-child(1){
+                    width: 80%;
+                }
+
+                .testimonies{
+
+                    .testimonyCard{
+                        
+                        h1{
+
+                            &::before{
+                                font-size: 8.6em;
+                                top: -80%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .actionCard{
+                margin: 10em 0;
+                grid-template-columns: 1fr 2fr;
+
+                .actionCardImg{
+                    width: 23em;
+                    height: 23em;
+                }
+
+                .actionCardText{
+                    padding-top: 10vh;
+
+                    p{
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .teamBox{
+
+                h1:nth-child(1){
+                    width: 80%;
+                }
+
+            }
+
+            .patner{
+
+                padding: 6px;
+
+                h1:nth-child(1){
+                    font-size: 3em;
+                }
+
+                .patnerImgs{
+                    width: 100%;
+                    margin: 0 auto;
+                    grid-template-columns: 1fr 1fr 1fr ;
+        
+                    .patnerLogo{
+                        width: 10em;
+                        height: 10em;
+                        border-radius: 10px;
+                        margin: 2em 0;
+                    }
+                }
+            }
+
+            .newsLetter{
+                .newsLetterText{
+                    // padding: 1vh 1vh;
+
+                    h1{
+                        font-size: 2.2em;
+                    }
+
+                    p{
+                        width: 80%;
+                    }
+                }
+            }
+
+
+            
+
+
+
+        }
+
+        footer{
+            
+            .footerContent{
+                padding: 15vh 0;
+
+                .about, .join{
+
+                    ul{
+                        width: 40%;
+                                        }
+                }
+            }
+        }
+    }
+
+    .turnDown{
+        transform: rotate(40deg) translateY(10px);
+       
+    }
+
+    .turnUp{
+        transform: rotate(-40deg) translateY(-12px);
+       
+
+    }
+
+    .hideBurger{
+        opacity: 0;
+       
+
+
+    }
+
+
+}
+
+// Mobile
+@media (min-width: 320px) and (max-width: 480px) {
+    body{
+        position: relative;
+        $mainYellow: #EABC04;
+        $mainBlack: #424141;
+        $poppins: 'Poppins', sans-serif;
+
+        header{
+            
+            nav{
+                display: none;
+            }
+
+            .mobileNav{
+                display: grid;
+                grid-template-columns: 1.2fr 4fr;
+
+                .mobileMenuLogo{
+                     width: 7em;;
+                     height: 7em;;
+                     background: url("../asset/PhotoWaka3.png");
+                     background-size: contain;
+                     background-position: center;
+                     background-repeat: no-repeat;
+                     margin: 0.2em 1em;
+                     padding: 0;
+                }
+ 
+                .burger{
+                    width: 100%;
+                    text-align: right;
+                    cursor: pointer;
+ 
+                    .burgerItems{
+                        padding-left: 0;
+                        padding-top: 2em;
+                        padding-left: 20vh;
+                    
+                        div{
+                            text-align: center;
+                            display: block;
+                            width: 4em;
+                            height: 0.19em;
+                            margin-bottom: 1em;
+                            background-color: $mainYellow;
+                            transition: all 0.6s ease-in-out;
+                           
+                    
+                        }
+                    }
+ 
+                    .burgerItems{
+                         div:nth-child(3){
+                             width: 2em;
+                             text-align: left;
+                             margin: 0;
+                         }
+                    }
+ 
+                } 
+ 
+               
+             
+            }
+        }
+
+        .mobileMenuItem{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 3px 0px #EABC04;
+            width: 100%;
+            display: none;
+            padding: 4vh 4vh;
+            position: absolute;
+            top: 17vh;
+            z-index: 3;
+          
+
+            ul{
+                li{
+                    list-style-type: none;
+
+
+                    a{
+                        text-decoration: none;
+                        color: $mainBlack;
+                        font-size: 1.52em;
+                        margin: 1.3em 0;
+                        display: inline-block;
+                        position: relative;
+
+                            &::before{
+                                content: "";
+                                width: 60%;
+                                height: 2px;
+                                background-color: $mainYellow;
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                            }
+
+                    }
+                }
+            }
+        }
+
+
+
+        main{
+            
+            .showcase{
+
+                display: block;
+                margin: 10em 0;
+                position: relative;
+
+                &::before{
+                    content: "";
+                    width: 32vh;
+                    right: 3%;
+                    height: 32vh;
+                    background-color: red;
+                    border-radius: 1000px;
+                    background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
+                    background-size: cover;
+                    display: block;
+                    position: absolute;
+                  
+                }
+
+                &::after{
+                    content: "";
+                    width: 8vh;
+                    right: 3%;
+                    height: 8vh;
+                    top: 0;
+                    background: linear-gradient(white, $mainYellow);
+                    border-radius: 1000px;
+                    display: block;
+                    position: absolute;
+                    animation: bounce 0.7s infinite alternate-reverse;
+                  
+                   
+                }
+
+                .showcaseHeading{
+                    width: 100%;
+
+                    h1{
+                        font-size: 1.2em
+                    }
+
+                    span{
+                        font-size: 1em
+                    }
+                }
+
+                .showcaseImg{
+                    display: none;
+                 }
+            }
+
+            .core{
+                display: block;
+
+                .coreCard{
+                    margin-bottom: 12em;
+                }
+            }
+
+             .founderBox{
+                border-radius: 0px;
+                display: block;
+                height: 120vh;
+                padding-top: 0.92em;
+                border-radius: 0px 0px 40em 40em;
+
+
+                .founderImg{
+                    width: 35vh;
+                    height: 35vh;
+                    padding: 0.4em;
+
+
+
+                    &::before{
+                        width: 18px;
+                        height: 18px;
+                        content: "";
+                        display: block;
+                        background-color: rgb(255, 255, 255);
+                        position: absolute;
+                        border: 6px solid white;
+                    }
+                }
+
+                p{
+                    padding-top: 13vh;
+                    margin-left: 1.4em;
+                    width: 90%;
+                    margin: 0 auto;
+
+
+
+                        &::before{
+                            top: 0%;
+                            font-size: 20.2em;
+                        }
+
+                        span{
+                            font-size: 1.3em;
+                        }
+                }
+
+                
+
+            }
+
+
+            .cards{
+                margin: 0 auto;
+
+                .postCards{
+                    
+                    margin: 7em 0;
+
+                    .postCardsText{
+                        padding-top: 4vh;
+
+                        h1{
+                            font-size: 1.9em;
+                            width: 100%;
+                        }
+
+                        p{
+                            font-size: 1.2em;
+                            width: 100%;
+                        }
+                    }
+
+                    
+                }
+
+                .postCards{
+                    display: block;
+                    
+                   .journeyImg{
+                       width: 230px;
+                       height: 230px;
+
+                       &::before{
+                        width: 200px;
+                        height: 200px;
+                        left: -4%;
+                        border-radius: 2000px;
+                        z-index: -2;
+                        background-color: rgb(255, 223, 95);
+                        content: "";
+                        display: block;
+                        position: absolute;
+                    }
+                   }
+
+                   .wakaImg {
+                    width: 230px;
+                    height: 230px;
+
+                    &::before{
+                     width: 200px;
+                     height: 200px;
+                     left: -4%;
+                     border-radius: 2000px;
+                     z-index: -2;
+                     background-color: rgb(255, 223, 95);
+                     content: "";
+                     display: block;
+                     position: absolute;
+                 }
+                }
+
+                .masterClassImg {
+                    width: 230px;
+                    height: 230px;
+
+                    &::before{
+                     width: 200px;
+                     height: 200px;
+                     left: -4%;
+                     border-radius: 2000px;
+                     z-index: -2;
+                     background-color: rgb(255, 223, 95);
+                     content: "";
+                     display: block;
+                     position: absolute;
+                 }
+                }
+
+                    
+                }
+            }
+
+            .testimony{
+                // padding: 0;
+                margin: 1em 0em;
+
+                h1:nth-child(1){
+                    width: 100%;
+                    font-size: 1.8em;
+                }
+
+                .testimonies{
+                    display: block;
+
+                    .testimonyCard{
+                        width: 100%;
+                        margin-bottom: 5em;
+
+
+                        h1{
+                            font-size: 2.4em;
+                            margin-bottom: 1em;
+
+                            &::before{
+                                font-size: 10em;
+                                top: -30%;
+                                right: 20%;
+                                opacity: 0.2;
+                            }
+                        }
+
+                        p{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .actionCard{
+                display: block;
+                position: relative;
+                text-align: left;
+
+                .actionCardImg{
+                    width: 34vh;
+                    height: 34vh;
+                    margin: 0;
+                }
+
+                .actionCardText{
+                    padding-top: 2em;
+
+                    h1{
+                        font-size: 2em;
+                    }
+
+                    p{
+                        width: 100%;
+                    }
+
+                    span{
+                        margin: 0.3em 0;
+                    }
+                    
+                }
+            }
+
+            .teamBox{
+                h1:nth-child(1){
+                    font-size: 2em;
+                    width: 100%;
+                    
+                }
+
+                .botBox, .directorBox, .executiveBox{
+                    text-align: center;
+        
+                    h1:nth-child(1){
+                        font-size: 1.3em;
+                        text-align: left;
+                        color: $mainBlack;
+                        font-weight: 900;
+                        width: 100%;
+                        margin: 2em 0;
+                        position: relative;
+            
+                            &::before{
+                                width: 40%;
+                                height: 5px;
+                                background-color: $mainYellow;
+                                content: "";
+                                display: block;
+                                bottom: 0;
+                                position: absolute;
+                            }
+                        
+            
+                    }
+        
+                    .bot, .executive, .director {
+                        text-align: left;
+                        display: block;
+                        width: 90%;
+                        margin: 2em auto;
+        
+                        .botCard, .executiveCard, .directorCard{
+                            margin: 2em 0;
+                            
+                        }
+        
+                   
+                    } 
+        
+        
+                }
+
+
+            }
+
+
+            .patner{
+
+                h1:nth-child(1){
+                    width: 100%;
+
+                }
+
+                .patnerImgs{
+                    display: block;
+                    width: 90%;
+                 
+
+                    .patnerLogo{
+                        width: 13em;
+                        padding: 0em;
+                        height: 13em;
+                        transform: scale(1.2);
+                        border-radius: 10px;
+                        margin: 3.2em auto;
+                    }
+                }
+
+            }
+
+            .newsLetter{
+                display: block;
+                margin-bottom: 0;
+
+                .newsLetterText{
+                    clip-path: none;
+                    border-radius: 0px;
+                    padding: 7em 1em;
+                }
+
+                .newsletterForm{
+                    border-radius: 0;
+
+                        input{
+                            width: 90%;
+                            padding: 0.4em 1.4em;
+                        }
+                }
+
+            }
+
+          
+
+
+
+        }
+
+        footer{
+            text-align: left;
+            padding-left: 12px;
+            
+         .footerContent{
+             padding: 10vh 0;
+             display: block;
+           
+             .about, .join{
+                 margin: 2em 0;
+                ul{
+                    width: 100%;
+
+
+                 }
+             }
+         }
+
+         p{
+             font-size: 0.82em;
+             width: 100%;
+             padding: 1em 0;
+         }
+
+         
+    }
+
+            
+    .turnDown{
+        transform: rotate(40deg) translateY(10px);
+       
+    }
+
+    .turnUp{
+        transform: rotate(-40deg) translateY(-12px);
+       
+
+    }
+
+    .hideBurger{
+        opacity: 0;
+       
+
+
+    }
+
+    
+ 
+ }
+}
 
 
 
@@ -1034,3 +2011,8 @@ body{
    
     }
 }
+
+
+
+    
+        
