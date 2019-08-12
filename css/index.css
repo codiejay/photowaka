@@ -990,6 +990,46 @@ body footer {
   text-align: center;
 }
 
+body footer .social {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0;
+  width: 30%;
+  padding-top: 2em;
+  padding-left: 10%;
+  text-align: right;
+  margin: 0 auto;
+}
+
+body footer .social a {
+  width: 40px;
+  background-position: center;
+  background-size: cover;
+  height: 40px;
+  display: block;
+  text-align: center;
+}
+
+body footer .social a:nth-child(1) {
+  background: url("../asset/facebook(1).svg");
+  background-position: center;
+  background-size: cover;
+}
+
+body footer .social a:nth-child(2) {
+  background: url("../asset/instagram.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+body footer .social a:nth-child(3) {
+  background: url("../asset/twitter-logo-button.svg");
+  background-position: center;
+  background-size: cover;
+}
+
 body footer .footerContent {
   padding: 30vh 0;
   display: -ms-grid;
@@ -1636,6 +1676,41 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
   body footer {
     text-align: left;
     padding-left: 12px;
+  }
+  body footer .social {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 0;
+    width: 50%;
+    padding-top: 2em;
+    padding-left: 10%;
+    text-align: right;
+    margin: 0 auto;
+  }
+  body footer .social a {
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    height: 40px;
+    display: block;
+    text-align: center;
+  }
+  body footer .social a:nth-child(1) {
+    background: url("../asset/facebook(1).svg");
+    background-position: center;
+    background-size: cover;
+  }
+  body footer .social a:nth-child(2) {
+    background: url("../asset/instagram.svg");
+    background-position: center;
+    background-size: cover;
+  }
+  body footer .social a:nth-child(3) {
+    background: url("../asset/twitter-logo-button.svg");
+    background-position: center;
+    background-size: cover;
   }
   body footer .footerContent {
     padding: 10vh 0;
