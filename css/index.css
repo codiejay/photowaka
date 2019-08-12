@@ -1344,8 +1344,8 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
         grid-template-columns: 1.2fr 4fr;
   }
   body header .mobileNav .mobileMenuLogo {
-    width: 7em;
-    height: 7em;
+    width: 5em;
+    height: 5em;
     background: url("../asset/PhotoWaka3.png");
     background-size: contain;
     background-position: center;
@@ -1360,15 +1360,15 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
   }
   body header .mobileNav .burger .burgerItems {
     padding-left: 0;
-    padding-top: 2em;
-    padding-left: 20vh;
+    padding-top: 1.5em;
+    padding-left: 25vh;
   }
   body header .mobileNav .burger .burgerItems div {
     text-align: center;
     display: block;
     width: 4em;
-    height: 0.19em;
-    margin-bottom: 1em;
+    height: 0.15em;
+    margin-bottom: 0.7em;
     background-color: #EABC04;
     -webkit-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
@@ -1416,9 +1416,9 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
   }
   body main .showcase::before {
     content: "";
-    width: 32vh;
+    width: 37vh;
     right: 3%;
-    height: 32vh;
+    height: 37vh;
     background-color: red;
     border-radius: 1000px;
     background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 204, 0, 0.404))), url("../asset/showcase.jpeg");
@@ -1442,12 +1442,13 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
   }
   body main .showcase .showcaseHeading {
     width: 100%;
+    padding-top: 6em;
   }
   body main .showcase .showcaseHeading h1 {
     font-size: 1.2em;
   }
   body main .showcase .showcaseHeading span {
-    font-size: 1em;
+    font-size: 1.4em;
   }
   body main .showcase .showcaseImg {
     display: none;
@@ -1728,8 +1729,8 @@ body footer .footerContent .about ul li a, body footer .footerContent .join ul l
     padding: 1em 0;
   }
   body .turnDown {
-    -webkit-transform: rotate(40deg) translateY(10px);
-            transform: rotate(40deg) translateY(10px);
+    -webkit-transform: rotate(40deg) translateY(6px);
+            transform: rotate(40deg) translateY(6px);
   }
   body .turnUp {
     -webkit-transform: rotate(-40deg) translateY(-12px);

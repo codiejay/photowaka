@@ -1502,8 +1502,8 @@ body{
                 grid-template-columns: 1.2fr 4fr;
 
                 .mobileMenuLogo{
-                     width: 7em;;
-                     height: 7em;;
+                     width: 5em;;
+                     height: 5em;;
                      background: url("../asset/PhotoWaka3.png");
                      background-size: contain;
                      background-position: center;
@@ -1519,15 +1519,15 @@ body{
  
                     .burgerItems{
                         padding-left: 0;
-                        padding-top: 2em;
-                        padding-left: 20vh;
+                        padding-top: 1.5em;
+                        padding-left: 25vh;
                     
                         div{
                             text-align: center;
                             display: block;
                             width: 4em;
-                            height: 0.19em;
-                            margin-bottom: 1em;
+                            height: 0.15em;
+                            margin-bottom: 0.7em;
                             background-color: $mainYellow;
                             transition: all 0.6s ease-in-out;
                            
@@ -1601,9 +1601,9 @@ body{
 
                 &::before{
                     content: "";
-                    width: 32vh;
+                    width: 37vh;
                     right: 3%;
-                    height: 32vh;
+                    height: 37vh;
                     background-color: red;
                     border-radius: 1000px;
                     background: linear-gradient(white, rgba(255, 204, 0, 0.404)), url("../asset/showcase.jpeg");
@@ -1630,13 +1630,14 @@ body{
 
                 .showcaseHeading{
                     width: 100%;
+                    padding-top: 6em;
 
                     h1{
                         font-size: 1.2em
                     }
 
                     span{
-                        font-size: 1em
+                        font-size: 1.4em
                     }
                 }
 
@@ -2023,7 +2024,8 @@ body{
 
             
     .turnDown{
-        transform: rotate(40deg) translateY(10px);
+        transform: rotate(40deg) translateY(6px);
+       
        
     }
 
