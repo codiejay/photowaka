@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>THE TEAM MEMBERS OF PHOTOWAKA</title>
+    <link rel="stylesheet" href="./css/team.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900, 100&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie&display=swap" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<body>
+        <header>
+                <nav>
+                    <a href="./index.html"><div class="navImg"></div></a> 
+                    <div class="navItems">
+                        <ul>
+                            <li><a href="">
+                                EVENTS
+                            </a></li>
+        
+                            <li><a href="">
+                                THE TEAM <span id="arrow"></span>
+                            </a></li>
+        
+                            <li><a href="">
+                                MEMBERS 
+                            </a></li>
+        
+                            <li><a href="">
+                                OUR SHOP
+                            </a></li>
+        
+                            <li><a href="">
+                                JOIN US.
+                            </a></li>
+        
+                        </ul>
+                    </div>
+                </nav>
+        
+                <div class="mobileNav">
+                    <a href="./index.html"><div class="mobileMenuLogo"></div></a> 
+                    <div class="burger">
+                        <div class="burgerItems">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+        
+                </div>
+        
+            
+            </header>
+
+            <div class="mobileMenuItem">
+                    <ul>
+                        <li><a href="">
+                            EVENTS
+                        </a></li>
+        
+                        <li><a href="./team.html">
+                            THE TEAM <span id="arrow"></span>
+                        </a></li>
+        
+                        <li><a href="">
+                            MEMBERS 
+                        </a></li>
+        
+                        <li><a href="">
+                            OUR SHOP
+                        </a></li>
+        
+                        <li><a href="">
+                            JOIN US.
+                        </a></li>
+        
+                    </ul>
+            </div>
+
+        <main>
+
+    
+          <div class="showcase">
+              <div class="showcaseText">
+                  <h1>THIS  IS PHOTOWAKA <b>TEAM MEMBERS</b></h1>
+                  <p>Everyone on the TEAM has made huge contributions to our overall success, Everyone is determined to see it's success.  </p>
+              </div>
+
+              <div class="showcaseImg">
+
+              </div>
+          </div>
+
+          <div class="divider">
+              <h1>MEET THE GUYS BEHIND THE SCENE. </h1>
+          </div>
+
+          <div class="members">
+              <div class="BOT">
+                <a href="./trustees.htm">
+                  <h1>BOARD OF TRUSTEES</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor voluptates facere, tenetur perferendis exercitationem voluptas vitae eaque omnis voluptatibus natus suscipit soluta, nemo quia temporibus fuga eligendi voluptate neque!</p>
+                  <button><a href="./trustees.htm">See The List</a></button>
+                </a>
+                </div>
+
+                <div class="BOA">
+                    <a href="./advisory.htm">
+                    <h1>ADVISORY BOARD</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor voluptates facere, tenetur perferendis exercitationem voluptas vitae eaque omnis voluptatibus natus suscipit soluta, nemo quia temporibus fuga eligendi voluptate neque!</p>
+                    <button><a href="./advisory.htm">See The List</a></button>
+                    </a>
+                </div>
+
+                <div class="BOD">
+                    <a href="">
+                    <h1>BOARD OF DIRECTORS</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolor voluptates facere, tenetur perferendis exercitationem voluptas vitae eaque omnis voluptatibus natus suscipit soluta, nemo quia temporibus fuga eligendi voluptate neque!</p>
+                    <button><a href="./directors.htm">See The List</a></button>
+                    </a>
+                </div>
+          </div>
+
+        
+            <div class="actionCard">
+                <div class="actionCardImg"></div>
+
+                <div class="actionCardText">
+                    <h1>
+                        JOIN THE TEAM!
+                    </h1>
+
+                    <p>
+                        We are looking for active, jovial people to contribute in building the team and join us in building one of Africa’s strongest professional communy! 
+                    </p>
+
+                    <span> <b>Apply to Volunteer &rightarrow;</b> </span>
+                </div>
+            </div>
+
+        </main>
+
+
+            <footer>
+                    <div class="social">
+                        <a href=""></a>
+                        <a href=""></a>
+                        <a href=""></a>
+                    </div>
+                    <div class="footerContent">
+            
+                        <div class="about">
+                            <h1>ABOUT US</h1>
+                            <ul>
+                                <li><a href="">THE TRUSTES</a></li>
+                                <li><a href="">THE EXECUTIVES</a></li>
+                                <li><a href="">THE DIRECTORS</a></li>
+                            </ul>
+                        </div>
+            
+                        <div class="join">
+                            <h1>JOIN US</h1>
+                            <ul>
+                                <li><a href="">AS MEMBER</a></li>
+                                <li><a href="">THE VOLUNTEER</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <P>
+                            Copyright 2019. All Rights Reserved- PhotoWaka Africa
+                    </P>
+                </footer>
+
+            
+            
+</body>
+
+   
+<script>
+    $(".burger").on(
+        "click", () =>{ 
+            $("main").toggle();
+            $("footer").toggle();
+            $(".mobileMenuItem").toggle();
+            
+            $($( $(".burger").children()[0]).children()[0]).toggleClass("turnDown")
+            $($( $(".burger").children()[0]).children()[1]).toggleClass("turnUp");
+            $($( $(".burger").children()[0]).children()[2]).toggleClass("hideBurger")
+    
+        }
+    )
+    </script>
+</html>

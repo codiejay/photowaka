@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PWA OFFICIAL TRUSTEES</title>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> 
+    <!-- <link rel="stylesheet" href="./index.css"> -->
+    <link rel="stylesheet" href="./css/trustees.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900, 100&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie&display=swap" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="./index.html"><div class="navImg"></div></a>
+            <div class="navItems">
+                <ul>
+                    <li><a href="">
+                        ABOUT US
+                    </a></li>
+
+                    <li ><a href="./team.html">
+                        THE TEAM <span id="arrow"></span>
+                    </a></li>
+
+                    <li><a href="">
+                        MEMBERS 
+                    </a></li>
+
+                    <li><a href="">
+                        OUR SHOP
+                    </a></li>
+
+                    <li><a href="">
+                        JOIN US.
+                    </a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="mobileNav">
+            <a href="./index.html"><div class="mobileMenuLogo"></div></a> 
+            <div class="burger">
+                <div class="burgerItems">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
+        </div>
+
+    
+    </header>
+
+    <div class="mobileMenuItem">
+        <ul>
+            <li><a href="">
+                ABOUT US
+            </a></li>
+
+            <li><a href="./team.html">
+                THE TEAM <span id="arrow"></span>
+            </a></li>
+
+            <li><a href="">
+                MEMBERS 
+            </a></li>
+
+            <li><a href="">
+                OUR SHOP
+            </a></li>
+
+            <li><a href="">
+                JOIN US.
+            </a></li>
+
+        </ul>
+    </div>
+
+
+
+
+    <main>
+
+
+      <div class="showcase">
+        <div class="showcaseText">
+          <h1>BOARD OF <b>TRUSTEES</b></h1>
+        </div>
+        <div class="showcaseImg">
+
+        </div>
+      </div>
+
+      <div class="divider">
+          <h1>MEET THE PWA DIRECTORS </h1>
+      </div>
+
+        
+    <div class="directors">
+           
+    
+    </div>
+
+    <div class="actionCard">
+        <div class="actionCardImg"></div>
+
+        <div class="actionCardText">
+            <h1>
+                JOIN THE TEAM!
+            </h1>
+
+            <p>
+                We are looking for active, jovial people to contribute in building the team and join us in building one of Africa’s strongest professional communy! 
+            </p>
+
+            <span> <b>Apply to Volunteer &rightarrow;</b> </span>
+        </div>
+    </div>
+
+
+           
+    </main>
+
+
+    <footer>
+        <div class="social">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+        <div class="footerContent">
+
+            <div class="about">
+                <h1>ABOUT US</h1>
+                <ul>
+                    <li><a href="">THE TRUSTES</a></li>
+                    <li><a href="">THE EXECUTIVES</a></li>
+                    <li><a href="">THE DIRECTORS</a></li>
+                </ul>
+            </div>
+
+            <div class="join">
+                <h1>JOIN US</h1>
+                <ul>
+                    <li><a href="">AS MEMBER</a></li>
+                    <li><a href="">THE VOLUNTEER</a></li>
+                </ul>
+            </div>
+        </div>
+        <P>
+                Copyright 2019. All Rights Reserved- PhotoWaka Africa
+        </P>
+    </footer>
+   
+
+
+</body>
+
+<script>
+    $(".burger").on(
+        "click", () =>{ 
+            $("main").toggle();
+            $("footer").toggle();
+            $(".mobileMenuItem").toggle();
+            
+            $($( $(".burger").children()[0]).children()[0]).toggleClass("turnDown")
+            $($( $(".burger").children()[0]).children()[1]).toggleClass("turnUp");
+            $($( $(".burger").children()[0]).children()[2]).toggleClass("hideBurger")
+    
+        }
+    )
+    </script>
+<script src="./index.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+     <script>
+     
+     // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCsbSj_AGP9OxT-KBmVxvgQhn894MQ4ka4",
+    authDomain: "photowaka-ad5cf.firebaseapp.com",
+    databaseURL: "https://photowaka-ad5cf.firebaseio.com",
+    projectId: "photowaka-ad5cf",
+    storageBucket: "photowaka-ad5cf.appspot.com",
+    messagingSenderId: "36090424132",
+    appId: "1:36090424132:web:24bbf76f07218106"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  let db = firebase.firestore()
+
+
+
+  let directorsBox = $(".directors")
+
+   let teammembers = db.collection("teammembers")
+//   console.log(db)
+
+
+  teammembers.get()
+  .then(snapshot => {
+
+    let firebaseStorage = firebase.storage().ref();
+    //  || 
+
+      snapshot.forEach( doc => {
+          if(doc.data().group === "BOARD OF DIRECTORS"  ){
+            let realUrl;
+          console.log(doc.data().userName);
+           let imgUrl =  firebaseStorage.child(`memberImages/${doc.data().userName}`)
+           imgUrl.getDownloadURL()
+           .then( url => {
+        
+            directorsBox.append(
+                `<div id="teamMember"> 
+          
+                 
+                <div style="color: red; background: linear-gradient( to top right, rgba(255, 255, 255, 0.234), rgba(234, 188, 4, 0.425)), url(${url});  margin: 0 auto; background-position: center; background-size: cover " id="memberImage"></div>
+                    
+            
+                    
+                 <h1> ${doc.data().userName} </h1>
+                 <h3> ${doc.data().group} </h3> 
+                 <p> ${doc.data().bio} </p> 
+  
+                </div>`
+            )
+           } )
+           .catch(err => {
+                realUrl = url;
+           })
+          }
+      
+
+     
+        
+      } )
+  }) 
+  
+
+     </script>
+
+
+
+</html>
