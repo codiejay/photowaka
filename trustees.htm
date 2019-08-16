@@ -219,7 +219,7 @@
     //  || 
 
       snapshot.forEach( doc => {
-          if(doc.data().group === "BOARD OF DIRECTORS"  ){
+          if(doc.data().group === "BOARD OF TRUSTEES"  ){
             let realUrl;
           console.log(doc.data().userName);
            let imgUrl =  firebaseStorage.child(`memberImages/${doc.data().userName}`)
