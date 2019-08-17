@@ -7,12 +7,16 @@
 
 
 }
-body{
 
-
+:root{
     $mainYellow: #EABC04;
     $mainBlack: #424141;
     $poppins: 'Poppins', sans-serif;
+}
+body{
+
+
+    
 
     button{
         background-color: white;
@@ -35,164 +39,7 @@ body{
     background-color: white;
     position: relative;
 
-    header{
-        position: fixed;
-        background-color: white;
-        top: 0;
-        width: 100%;
-        left: 0;
-        z-index: 3;
-        border-bottom: 1.3px solid $mainYellow;
-        
-
-        nav{
-            display: grid;
-            grid-template-columns: 30% 1fr;
-
-
-            .navImg{
-                width: 6em;
-                // padding: 1em 0.9em;
-                margin: 1em;
-                height: 6em;
-                background: url("../asset/PhotoWaka3.png");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                transform: scale(1.5);
-                margin-left: 5em;
-            }
-
-            .navItems{
-                padding: 3em 0.9em;
-
-                ul{
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr);
-                    grid-column-gap: 1em;
-                   
-
-                    li{
-                        list-style-type: none;
-                        color: $mainBlack;
-                      
-                        // background-color: red;
-
-                        &::before{
-                            content: "";
-                            width: 0%;
-                            height: 2px;
-                            display: block;
-                            position: absolute;
-                            bottom: 40%;
-                            transition: all 0.61s;
-                        }
-
-                        &:hover{
-
-                            
-
-                            
-                        &::before{
-                            content: "";
-                            width: 8%;
-                            height: 2px;
-                            background-color: rgb(234, 188, 4);
-                            display: block;
-                            position: absolute;
-                            bottom: 40%;
-                            transition: all 2s;
-                            z-index: -1;
-                        }
-
-                        }
-                        
-                   
-
-                        a{
-                            display: inline-block;
-                            text-decoration: none;
-                            color: $mainBlack;
-                            font-size: 1.2em;
-                            font-weight: lighter;
-
-                            
-                        }
-                    }
-
-                    li:nth-child(2){
-                        
-                    
-
-                        ul{
-                            display: none;
-                            // display: block;
-                            background-color: rgb(255, 255, 255);
-                            padding: 1.3em;
-                            box-shadow: 0px 0px 11px 1px rgba(234, 188, 4, 0.247);
-                            width: 30vw;
-                            margin-top: 1em;
-                            color: white;
-
-                            li{
-
-                                a{
-                                    display: block;
-                                    margin: 1em 0;
-
-                                }
-                            }
-                        }
-
-                       
-                    }
-
-                    li:nth-child(5){
-                        position: relative;
-                        text-align: center;
-                        cursor: pointer;
-                        transition: all 0.4s ease-in;
-
-                        a{
-                            color:  $mainYellow;
-                            font-weight: bold;
-
-                        }
-
-                        &:hover{
-                            transform: scale(1.1);
-                            color: white;
-
-                            a{
-                                color: white;
-                            }
-                        }
-                       
-                        &::before{
-                            content: "";
-                            width: 100%;
-                            height: 100%;
-                            padding: 17px 0;
-                            border: 1px solid $mainYellow;
-                            
-                            display: block;
-                            top: -60%;
-                            box-shadow: 0px 8px 8px rgba(234, 188, 4, 0.19);
-                            border-radius: 1000px;
-                            position: absolute;
-                        }
-                    }
-
-                }
-            }
-        }
-
-        .mobileNav{
-            display: none;
-           
-        }
-       
-    }
+  
 
 
     main{
@@ -998,86 +845,6 @@ body{
 
     }
 
-    footer{
-
-        .social{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-column-gap: 0;
-            width: 30%;
-            padding-top: 2em;
-            padding-left: 10%; 
-            text-align: right;
-            margin: 0 auto;
-
-            a{
-                
-                width: 40px;
-                background-position: center;
-                background-size: cover;
-                height: 40px;
-                display: block;
-                text-align: center;
-            }
-
-            a:nth-child(1){
-                background: url("../asset/facebook\(1\).svg");
-                background-position: center;
-                background-size: cover;
-            }
-
-            a:nth-child(2){
-                background: url("../asset/instagram.svg");
-                background-position: center;
-                background-size: cover;
-            }
-
-            a:nth-child(3){
-                background: url("../asset/twitter-logo-button.svg");
-                background-position: center;
-                background-size: cover;
-            }
-        }
-        background: linear-gradient(rgba(17, 17, 17, 0.863), rgba(0, 0, 0, 0.897)), url("../asset/PhotoWaka2.png");
-        background-size: cover;
-        background-position: center;
-        
-        color: white;
-        text-align: center;
-        
-        .footerContent{
-            padding: 30vh 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            .about, .join{
-                h1{
-                    font-size: 2.3em;
-                    font-weight: 900;
-
-                }
-
-                ul{
-                    width: 20%;
-                    margin: 0 auto;
-                   li{
-                       text-align: left;
-                       list-style-type: square;
-
-                       a{
-                           color: white;
-                           font-size: 1.1em;
-                           margin: 1em 0;
-                           display: block;
-                       }
-                   }
-                }
-            }
-
-        }
-
-        
-    }
     
 }
 
@@ -1092,112 +859,8 @@ body{
         $mainBlack: #424141;
         $poppins: 'Poppins', sans-serif;
 
-        header{
-            display: grid;
-            grid-template-columns: 1fr 3fr;
-            
-            
 
-            nav{
-                display: none;
-
-                    .navItems{
-                        display: none;
-                    }
-            }
-
-            .mobileNav{
-              display: grid;
-              grid-template-columns: 1.2fr 4fr;
-
-               .mobileMenuLogo{
-                    width: 7em;;
-                    height: 7em;;
-                    background: url("../asset/PhotoWaka3.png");
-                    background-size: contain;
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    margin: 0.2em 1em;
-                    padding: 0;
-               }
-
-               .burger{
-                   width: 100%;
-                   text-align: right;
-                   cursor: pointer;
-
-                   .burgerItems{
-                       padding-left: 66vw;
-                       padding-top: 2em;
-                       text-align: right;
-                   
-                       div{
-                           text-align: center;
-                           display: block;
-                           width: 4em;
-                           height: 0.19em;
-                           margin: 0 auto 1em auto;
-                           background-color: $mainYellow;
-                           transition: all 0.6s ease-in-out;
-                          
-                   
-                       }
-                   }
-
-                   .burgerItems{
-                        div:nth-child(3){
-                            width: 2em;
-                            text-align: left;
-                            margin: 0;
-                        }
-                   }
-
-               } 
-
-              
-            }
-
-           
-        }
-
-        .mobileMenuItem{
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 0px 3px 0px #EABC04;
-            width: 100%;
-            display: none;
-            padding: 4vh 4vh;
-            position: absolute;
-            top: 8vh;
-            z-index: 3;
-          
-
-            ul{
-                li{
-                    list-style-type: none;
-
-
-                    a{
-                        text-decoration: none;
-                        color: $mainBlack;
-                        font-size: 1.52em;
-                        margin: 1.3em 0;
-                        display: inline-block;
-                        position: relative;
-
-                            &::before{
-                                content: "";
-                                width: 60%;
-                                height: 2px;
-                                background-color: $mainYellow;
-                                display: block;
-                                position: absolute;
-                                bottom: 0;
-                            }
-
-                    }
-                }
-            }
-        }
+        
 
         main{
 
@@ -1447,19 +1110,7 @@ body{
 
         }
 
-        footer{
-            
-            .footerContent{
-                padding: 15vh 0;
-
-                .about, .join{
-
-                    ul{
-                        width: 40%;
-                                        }
-                }
-            }
-        }
+       
     }
 
     .turnDown{
@@ -1490,106 +1141,6 @@ body{
         $mainYellow: #EABC04;
         $mainBlack: #424141;
         $poppins: 'Poppins', sans-serif;
-
-        header{
-            
-            nav{
-                display: none;
-            }
-
-            .mobileNav{
-                display: grid;
-                grid-template-columns: 1.2fr 4fr;
-
-                .mobileMenuLogo{
-                     width: 5em;;
-                     height: 5em;;
-                     background: url("../asset/PhotoWaka3.png");
-                     background-size: contain;
-                     background-position: center;
-                     background-repeat: no-repeat;
-                     margin: 0.2em 1em;
-                     padding: 0;
-                }
- 
-                .burger{
-                    width: 100%;
-                    text-align: right;
-                    cursor: pointer;
- 
-                    .burgerItems{
-                        padding-left: 0;
-                        padding-top: 1.5em;
-                        padding-left: 25vh;
-                    
-                        div{
-                            text-align: center;
-                            display: block;
-                            width: 4em;
-                            height: 0.15em;
-                            margin-bottom: 0.7em;
-                            background-color: $mainYellow;
-                            transition: all 0.6s ease-in-out;
-                           
-                    
-                        }
-                    }
- 
-                    .burgerItems{
-                         div:nth-child(3){
-                             width: 2em;
-                             text-align: left;
-                             margin: 0;
-                         }
-                    }
- 
-                } 
- 
-               
-             
-            }
-        }
-
-        .mobileMenuItem{
-            background-color: rgb(255, 255, 255);
-            box-shadow: 0px 0px 3px 0px #EABC04;
-            width: 100%;
-            display: none;
-            padding: 4vh 4vh;
-            position: absolute;
-            top: 17vh;
-            z-index: 3;
-          
-
-            ul{
-                li{
-                    list-style-type: none;
-
-
-                    a{
-                        text-decoration: none;
-                        color: $mainBlack;
-                        font-size: 1.52em;
-                        margin: 1.3em 0;
-                        display: inline-block;
-                        position: relative;
-
-                            &::before{
-                                content: "";
-                                width: 60%;
-                                height: 2px;
-                                background-color: $mainYellow;
-                                display: block;
-                                position: absolute;
-                                bottom: 0;
-                            }
-
-                    }
-                }
-            }
-        }
-
-
 
         main{
             
@@ -1956,71 +1507,7 @@ body{
 
 
 
-        footer{
-
-            .social{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-column-gap: 0;
-                width: 50%;
-                padding-top: 2em;
-                padding-left: 10%; 
-                text-align: right;
-                margin: 0 auto;
-    
-                a{
-                    
-                    width: 40px;
-                    background-position: center;
-                    background-size: cover;
-                    height: 40px;
-                    display: block;
-                    text-align: center;
-                }
-    
-                a:nth-child(1){
-                    background: url("../asset/facebook\(1\).svg");
-                    background-position: center;
-                    background-size: cover;
-                }
-    
-                a:nth-child(2){
-                    background: url("../asset/instagram.svg");
-                    background-position: center;
-                    background-size: cover;
-                }
-    
-                a:nth-child(3){
-                    background: url("../asset/twitter-logo-button.svg");
-                    background-position: center;
-                    background-size: cover;
-                }
-            }
-            text-align: left;
-            padding-left: 12px;
-            
-         .footerContent{
-             padding: 10vh 0;
-             display: block;
-           
-             .about, .join{
-                 margin: 2em 0;
-                ul{
-                    width: 100%;
-
-
-                 }
-             }
-         }
-
-         p{
-             font-size: 0.82em;
-             width: 100%;
-             padding: 1em 0;
-         }
-
-         
-    }
+      
 
             
     .turnDown{

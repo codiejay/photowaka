@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PWA OFFICIAL ADVISORS</title>
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/advisors.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,900, 100&display=swap" rel="stylesheet">  
-    <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie&display=swap" rel="stylesheet"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>PhotoWaka Official Website</title>
+    <!-- FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,900, 100&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie&display=swap" rel="stylesheet"> 
+    <!-- CSS -->
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/member.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-firestore.js"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
 </head>
-<body>
 
+<body>
+    
     <header>
         <nav>
-            <a href="./index.html"><div class="navImg"></div></a>
+            <div class="navImg"></div>
             <div class="navItems">
                 <ul>
                     <li><a href="">
@@ -50,7 +55,7 @@
         </nav>
 
         <div class="mobileNav">
-            <a href="./index.html"><div class="mobileMenuLogo"></div></a> 
+            <div class="mobileMenuLogo"></div>
             <div class="burger">
                 <div class="burgerItems">
                     <div></div>
@@ -89,51 +94,41 @@
         </ul>
     </div>
 
-
-
-
     <main>
+        <div class="showcase">
+            <div class="showcaseHeading">
+                <h1>BECOME A MEMBER OF THE  <b>PHOTOWAKA AFRICA FAMILY</b></h1>
+            </div>
 
+            <div class="showcaseImg">
 
-      <div class="showcase">
-        <div class="showcaseText">
-          <h1>BOARD OF <b>ADVISORS</b></h1>
+            </div>
         </div>
-        <div class="showcaseImg">
 
+        <div class="divider">
+            <h1>BECOME A MEMBER</h1>
         </div>
-      </div>
 
-      <div class="divider">
-          <h1>MEET THE PWA  ADVISORS </h1>
-      </div>
-
-        
-    <div class="directors">
-           
+        <div class="intro">
+            <p>THE MEMBERSHIP PLANS ARE STILL UNDER PROCESSING. KINDLY FILL OUT THE FORM BELOW AND ONCE WE SET UP THE OFFICIAL MEMBERSHIP PLANS, YOU'LL BE THE FIRST TO KNOW</p>
+        </div>
+        <form>
+            <div class="form">
+            
+                <input id="username" placeholder="Your Cute Name" type="text">
+                <input type="email" placeholder="A Valid Mail" name="" id="useremail">
+                <input placeholder="Your Mobile Number" type="text" name="" id="usernumber">
     
-    </div>
-
-    <div class="actionCard">
-        <div class="actionCardImg"></div>
-
-        <div class="actionCardText">
-            <h1>
-                JOIN THE TEAM!
-            </h1>
-
-            <p>
-                We are looking for active, jovial people to contribute in building the team and join us in building one of Africa’s strongest professional communy! 
-            </p>
-
-            <span> <b>Apply to Volunteer &rightarrow;</b> </span>
-        </div>
-    </div>
-
-
-           
+            </div>
+            <button id="submit">SUBMIT</button>
+        </form>
+        
     </main>
 
+    <div class="confirm">
+        <h1>THANKS! YOUR DATA HAS BEEN RECORDED</h1>
+        <p>As promised, we'll get back to you once our plans are set!</p>
+    </div>
 
     <footer>
         <div class="social">
@@ -164,6 +159,8 @@
                 Copyright 2019. All Rights Reserved- PhotoWaka Africa
         </P>
     </footer>
+
+
    
 
 
@@ -182,8 +179,8 @@
     
         }
     )
-    </script>
-<script src="./index.js"></script>
+</script>
+
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
@@ -203,57 +200,41 @@
   firebase.initializeApp(firebaseConfig);
   let db = firebase.firestore()
 
+  let userName = $("#username");
+  let userEmail = $("#useremail");
+  let userNumber = $("#usernumber")
+
+  let submit =  $("#submit")
+
+  $(".confirm").hide()
+  submit.on("click", (e) => {
+      e.preventDefault();
+
+      let timeStamp = new Date().time;
+
+      if(userEmail.val() !== "" && 
+      userName.val() !== "" && 
+      userNumber.val() !== ""){
+         
+         submit.text("Loading.....");
+         $(".form").css("opacity", 0.1);
+         db.collection("prospectiveMembers").doc(`${userName.val()} ${new Date().getTime()}  `)
+         .set({
+             name: userName.val(),
+             email: userEmail.val(),
+             phonenumber: userNumber.val()
+         })
+
+         .then( () => {
+             $("main").hide(100)
+             $(".confirm").show(100);
+         } )
+
+      }
+  })
 
 
-  let directorsBox = $(".directors")
-
-   let teammembers = db.collection("teammembers")
-//   console.log(db)
-
-
-  teammembers.get()
-  .then(snapshot => {
-
-    let firebaseStorage = firebase.storage().ref();
-    //  || 
-
-      snapshot.forEach( doc => {
-          if(doc.data().group === "BOARD OF DIRECTORS"  ){
-            let realUrl;
-          console.log(doc.data().userName);
-           let imgUrl =  firebaseStorage.child(`memberImages/${doc.data().userName}`)
-           imgUrl.getDownloadURL()
-           .then( url => {
-        
-            directorsBox.append(
-                `<div id="teamMember"> 
-          
-                 
-                <div style="color: red; background: linear-gradient( to top right, rgba(255, 255, 255, 0.234), rgba(234, 188, 4, 0.425)), url(${url});  margin: 0 auto; background-position: center; background-size: cover " id="memberImage"></div>
-                    
-            
-                    
-                 <h1> ${doc.data().userName} </h1>
-                 <h3> ${doc.data().group} </h3> 
-                 <p> ${doc.data().bio} </p> 
-  
-                </div>`
-            )
-           } )
-           .catch(err => {
-                realUrl = url;
-           })
-          }
-      
-
-     
-        
-      } )
-  }) 
-  
 
      </script>
-
-
 
 </html>
