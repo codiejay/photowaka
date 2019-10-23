@@ -9,13 +9,13 @@
 }
 
 :root{
-    $mainYellow: #EABC04;
-    $mainBlack: #424141;
-    $poppins: 'Poppins', sans-serif;
+   
 }
 body{
 
-
+    $mainYellow: #EABC04;
+    $mainBlack: #424141;
+    $poppins: 'Poppins', sans-serif;
     
 
     button{
@@ -48,7 +48,7 @@ body{
         .showcase{
             display: grid;
             grid-template-columns: 60% 1fr;
-            margin: 5em 0;
+            margin: 10em 0;
 
 
             .showcaseHeading{
@@ -244,7 +244,7 @@ body{
             background-color: #EABC04;
             height: 110vh;
             display: grid;
-            border-radius: 0px 0px 40em 40em;
+            border-radius: 0px 0px 90vh 90vh;
             grid-template-columns:  1fr 1.3fr;
             
 
@@ -510,7 +510,7 @@ body{
                 .testimonyCardImg{
                     width: 6em;
                     height: 6em;
-                    background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/tola.jpg");
+                    background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/Igunma\ Adora\ 0..jpeg");
                     background-size: cover;
                     border-radius: 2000px;
                 }
@@ -755,25 +755,19 @@ body{
             margin: 0 auto;
 
             .patnerLogo{
-                width: 10em;
+                width: 20em;
                 padding: 1em;
-                height: 10em;
+                height: 20em;
                 border-radius: 10px;
             }
 
 
             .patnerLogo:nth-child(1){
-                background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/bolt.png");
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
+                display: none;
             }
 
             .patnerLogo:nth-child(2){
-                background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/canon.png");
-                background-size: contain;
-                background-position: center;
-                background-repeat: no-repeat;
+                display: none;
             }
 
             .patnerLogo:nth-child(3){
@@ -1494,6 +1488,7 @@ body{
                         input{
                             width: 90%;
                             padding: 0.4em 1.4em;
+                            
                         }
                 }
 
@@ -1503,13 +1498,7 @@ body{
 
 
 
-        }
-
-
-
-      
-
-            
+        }    
     .turnDown{
         transform: rotate(40deg) translateY(6px);
        
@@ -1528,45 +1517,8 @@ body{
 
 
     }
-
-    
- 
  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Animations;
 
@@ -1577,6 +1529,7 @@ body{
 
     to{
         transform: rotate(360deg) scale(0.6);
+        
    
     }
 }

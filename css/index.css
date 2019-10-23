@@ -34,7 +34,7 @@ body main .showcase {
   display: grid;
   -ms-grid-columns: 60% 1fr;
       grid-template-columns: 60% 1fr;
-  margin: 5em 0;
+  margin: 10em 0;
 }
 
 body main .showcase .showcaseHeading {
@@ -216,7 +216,7 @@ body main .founderBox {
   height: 110vh;
   display: -ms-grid;
   display: grid;
-  border-radius: 0px 0px 40em 40em;
+  border-radius: 0px 0px 90vh 90vh;
   -ms-grid-columns: 1fr 1.3fr;
       grid-template-columns: 1fr 1.3fr;
 }
@@ -465,8 +465,8 @@ body main .testimony .testimonies .testimonyCard p {
 body main .testimony .testimonies .testimonyCard:nth-child(1) .testimonyCardImg {
   width: 6em;
   height: 6em;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.582)), to(rgba(234, 188, 4, 0.349))), url("../asset/tola.jpg");
-  background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/tola.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.582)), to(rgba(234, 188, 4, 0.349))), url("../asset/Igunma Adora 0..jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.582), rgba(234, 188, 4, 0.349)), url("../asset/Igunma Adora 0..jpeg");
   background-size: cover;
   border-radius: 2000px;
 }
@@ -762,26 +762,18 @@ body main .patner .patnerImgs {
 }
 
 body main .patner .patnerImgs .patnerLogo {
-  width: 10em;
+  width: 20em;
   padding: 1em;
-  height: 10em;
+  height: 20em;
   border-radius: 10px;
 }
 
 body main .patner .patnerImgs .patnerLogo:nth-child(1) {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.459)), to(rgba(234, 188, 4, 0.336))), url("../asset/bolt.png");
-  background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/bolt.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: none;
 }
 
 body main .patner .patnerImgs .patnerLogo:nth-child(2) {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.459)), to(rgba(234, 188, 4, 0.336))), url("../asset/canon.png");
-  background: linear-gradient(rgba(255, 255, 255, 0.459), rgba(234, 188, 4, 0.336)), url("../asset/canon.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  display: none;
 }
 
 body main .patner .patnerImgs .patnerLogo:nth-child(3) {
