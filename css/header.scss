@@ -102,8 +102,6 @@ header{
                 }
 
                 li:nth-child(2){
-                    
-                
 
                     ul{
                         display: none;
@@ -128,25 +126,18 @@ header{
                    
                 }
 
-                li:nth-child(5){
+                a:nth-child(5){
                     position: relative;
                     text-align: center;
                     cursor: pointer;
                     transition: all 0.4s ease-in;
+                    text-decoration: none;
+                    color: #EABC04;
+                    font-weight: bold;
 
-                    a{
-                        color:  $mainYellow;
-                        font-weight: bold;
-
-                    }
 
                     &:hover{
                         transform: scale(1.1);
-                        color: white;
-
-                        a{
-                            color: white;
-                        }
                     }
                    
                     &::before{
@@ -155,14 +146,13 @@ header{
                         height: 100%;
                         padding: 17px 0;
                         border: 1px solid $mainYellow;
-                        
                         display: block;
                         top: -60%;
                         box-shadow: 0px 8px 8px rgba(234, 188, 4, 0.19);
                         border-radius: 1000px;
                         position: absolute;
                     }
-                }
+                } 
 
             }
         }
@@ -174,10 +164,6 @@ header{
     }
    
 }
-
-
-
-
 
 /* Tablet */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
@@ -323,7 +309,7 @@ header{
                 width: 100%;
                 text-align: right;
                 cursor: pointer;
-
+                transform: scale(0.8);
                 .burgerItems{
                     padding-left: 0;
                     padding-top: 1.5em;

@@ -1,8 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
+  line-height: 1.8em;
 }
 
 body {
@@ -103,8 +104,8 @@ body main .core {
   margin: 15em 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 body main .core .coreCard {
@@ -120,7 +121,6 @@ body main .core .coreCard::before {
   height: 130%;
   content: "";
   position: absolute;
-  border: 0.8px solid #EABC04;
   border-radius: 10px;
   display: block;
   top: 15%;
@@ -129,7 +129,6 @@ body main .core .coreCard::before {
 
 body main .core .coreCard h1 {
   color: #EABC04;
-  text-shadow: 1px 1px 4px rgba(234, 188, 4, 0.589);
   font-size: 1.8em;
   font-weight: lighter;
   margin-bottom: 1.4em;
@@ -211,12 +210,34 @@ body main .core .coreCard:nth-child(3) .coreCardImg::before {
   background-repeat: no-repeat;
 }
 
+body main .core .coreCard:nth-child(4) .coreCardImg {
+  border: 10px solid white;
+  width: 90px;
+  margin: 0 auto;
+  height: 90px;
+  border-radius: 1200px;
+  background: #EABC04;
+  display: block;
+}
+
+body main .core .coreCard:nth-child(4) .coreCardImg::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background: url("../asset/collaborate.svg");
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background-repeat: no-repeat;
+}
+
 body main .founderBox {
   background-color: #EABC04;
   height: 110vh;
   display: -ms-grid;
   display: grid;
-  border-radius: 0px 0px 90vh 90vh;
   -ms-grid-columns: 1fr 1.3fr;
       grid-template-columns: 1fr 1.3fr;
 }
@@ -224,8 +245,8 @@ body main .founderBox {
 body main .founderBox .founderImg {
   width: 70vh;
   height: 70vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.192)), to(rgba(234, 188, 4, 0.507))), url("../asset/founderIMG.jpg");
-  background: linear-gradient(rgba(255, 255, 255, 0.192), rgba(234, 188, 4, 0.507)), url("../asset/founderIMG.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.192)), to(rgba(234, 188, 4, 0.507))), url("../asset/groupPhoto.jpeg");
+  background: linear-gradient(rgba(255, 255, 255, 0.192), rgba(234, 188, 4, 0.507)), url("../asset/groupPhoto.jpeg");
   background-size: cover;
   border-radius: 1000px;
   margin: 3em auto 1em auto;
@@ -441,21 +462,6 @@ body main .testimony .testimonies .testimonyCard h1 {
   color: #424141;
 }
 
-body main .testimony .testimonies .testimonyCard h1::before {
-  content: ' " ';
-  width: 30px;
-  height: 30px;
-  font-family: 'Ruge Boogie', cursive;
-  font-size: 18em;
-  position: absolute;
-  color: #EABC04;
-  top: -282%;
-  right: 50%;
-  z-index: 0.1;
-  opacity: 0.3;
-  display: block;
-}
-
 body main .testimony .testimonies .testimonyCard p {
   color: #424141;
   font-size: 1.1em;
@@ -512,8 +518,8 @@ body main .actionCard .actionCardImg {
   margin: 0 auto;
   display: block;
   height: 35em;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.637)), to(rgba(234, 188, 4, 0.63))), url("../asset/founderBehond.JPG");
-  background: linear-gradient(rgba(255, 255, 255, 0.637), rgba(234, 188, 4, 0.63)), url("../asset/founderBehond.JPG");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.637)), to(rgba(234, 188, 4, 0.63))), url("../asset/teamPhoto.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.637), rgba(234, 188, 4, 0.63)), url("../asset/teamPhoto.jpg");
   background-position: center;
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 82% 16%, 78% 100%, 0 100%, 0% 38%);
@@ -523,6 +529,12 @@ body main .actionCard .actionCardImg {
 
 body main .actionCard .actionCardText {
   padding-top: 20vh;
+}
+
+body main .actionCard .actionCardText a {
+  text-decoration: none;
+  color: #EABC04;
+  font-weight: bold;
 }
 
 body main .actionCard .actionCardText h1 {
@@ -1069,7 +1081,7 @@ body main .newsLetter .newsletterForm input {
     display: block;
   }
   body main .core .coreCard {
-    margin-bottom: 12em;
+    margin-bottom: 6em;
   }
   body main .founderBox {
     border-radius: 0px;

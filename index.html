@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PhotoWaka Official Website</title>
     <!-- FONT -->
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,900, 100&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie&display=swap" rel="stylesheet"> 
     <!-- CSS -->
@@ -13,6 +14,8 @@
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/footer.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 <body>
     <header>
@@ -20,9 +23,9 @@
             <div class="navImg"></div>
             <div class="navItems">
                 <ul>
-                    <!-- <li><a href="">
+                    <li><a href="">
                         EVENTS
-                    </a></li> -->
+                    </a></li>
 
                     <li ><a href="./team.html">
                         THE TEAM <span id="arrow"></span>
@@ -36,9 +39,9 @@
                         OUR SHOP
                     </a></li>
 
-                    <!-- <li><a href="./members.html">
+                    <a href="http://bit.ly/teamphotowaka">
                         JOIN US.
-                    </a></li> -->
+                    </a>
 
                 </ul>
             </div>
@@ -77,8 +80,8 @@
                     OUR SHOP
                 </a></li> -->
 
-                <li><a href="./members.html">
-                    JOIN US.
+                <li><a href="./joinTelegram.html">
+                    JOIN US
                 </a></li>
 
             </ul>
@@ -90,10 +93,7 @@
             <div class="showcaseHeading">
                 <h1>THIS IS <span>PHOTOWAKA AFRICA</span></h1>
             </div>
-
-            <div class="showcaseImg">
-
-            </div>
+            <div class="showcaseImg"></div>
         </div>
 
         <div class="core">
@@ -103,45 +103,46 @@
 
                 </div>
 
-                <h1>EXCELLENCE</h1>
-                <p>
-                    Putting our best in whatever we do. Aiming for higher and global standards
-                </p>
+                <h1>Excellence</h1>
             </div>
+            <div class="coreCard">
+              <div class="coreCardImg">
 
+              </div>
+
+              <h1>Community Engagement</h1>
+          </div>
+            <div class="coreCard">
+              <div class="coreCardImg">
+
+              </div>
+
+              <h1>Communication</h1>
+          </div>
             <div class="coreCard">
                 <div class="coreCardImg">
-
                 </div>
 
-                <h1>COMMUNICATION</h1>
-                <p>
-                    COMMUNICATION is key in whatever we do  therefore as visual storytellers, we are sending an inviolable message 
-                </p>
+                <h1>Collaboration</h1>
             </div>
-
-            <div class="coreCard">
-                <div class="coreCardImg">
-
-                </div>
-
-                <h1>COMMUNITY</h1>
-                <p>
-                    PhotoWaka aims to build a worldclass community where members freely express themselves
-                </p>
-            </div>
-
         </div>
 
 
-        <div class="founderBox">
+        <div class="founderBox" id='vision'>
             <div class="founderImg"></div>
             <p>
-                PhotoWaka Africa is a social enterprise focused on youth empowerment, 
-                creativity, job creation and creating a sustainable value chain in the photography and creative space
-                <span>-SIR INYENE</span>
+              The vision of PhotoWaka Africa is to build the largest and most engaging community of photographers and visual storytellers that will be bold enough to change the negative stereotypes of Africa and Africans for good.
+                <span>-OUR VISION</span>
             </p>
         </div>
+
+        <div class="founderBox">
+          <div class="founderImg" id='mission'></div>
+          <p>
+            To enable, engage, and enrich photographers and visual storytellers in Africa to acquire the knowledge and skills needed to be successful, so that they can make real impact and career with their skills
+              <span>-OUR MISSION</span>
+          </p>
+      </div>
 
         <div class="cards">
     
@@ -158,41 +159,13 @@
                 </button>
             </div>
         </div>
-
-
-        <div class="postCards waka">
-            <div class="postCardsImg wakaImg"></div>
-            <div class="postCardsText">
-                <h1>OUR PHOTOWALK</h1>
-                <p>
-                    The vision of PhotoWaka Africa is to develop a professionally inclined, engaging and highly creative community of visual storytellers around Africa, with the bodacious mission of telling African stories.
-                </p>
-
-                <button>
-                    REGISTER
-                </button>
-            </div>
-        </div>
-
-        <div class="postCards masterClass">
-            <div class="postCardsImg masterClassImg"></div>
-            <div class="postCardsText">
-                <h1>OUR <br/>MASTER-CLASS</h1>
-                <p>
-                    The vision of PhotoWaka Africa is to develop a professionally inclined, engaging and highly creative community of visual storytellers around Africa, with the bodacious mission of telling African stories 
-                </p>
-
-                <button>
-                    REGISTER
-                </button>
-            </div>
         </div>
 
                 
     </div>
     
         <div class="testimony">
-        <h1>WHAT    ARE PEOPLE SAYING</h1>
+        <h1>WHAT PEOPLE ARE SAYING ABOUT US.</h1>
             
             <div class="testimonies">
 
@@ -207,20 +180,7 @@
 
                 </div>
 
-                
                 <div class="testimonyCard">
-
-                    <div class="testimonyCardImg"></div>
-                    <h1>Bimbo Joe</h1>
-                    <p>
-                        PhotoWaka Is something like nothing I have experienced  before, it brings out the very best in me! 
-                    </p>
-                    
-                </div>
-
-                
-                <div class="testimonyCard">
-
                     <div class="testimonyCardImg"></div>
                     <h1>Gift Okoro</h1>
                     <p>
@@ -230,20 +190,7 @@
                         
                         These visuals are to back up my claim.  What is your own testimony.  How has photowakaafrica  advanced you?  
                     </p>
-                    
                 </div>
-
-                
-                <div class="testimonyCard">
-
-                    <div class="testimonyCardImg"></div>
-                    <h1>Jack Adams</h1>
-                    <p>
-                        Photowaka has played a huge roll in bridging the space between creative
-                    </p>
-                    
-                </div>
-
             </div>
         </div>
 
@@ -259,7 +206,7 @@
                     We are looking for active, jovial people to contribute in building the team and join us in building one of Africa’s strongest professional community! 
                 </p>
 
-                <span> <b>Apply to Volunteer &rightarrow;</b> </span>
+                <span> <a href='http://bit.ly/teamphotowaka'>Apply to Volunteer &rightarrow;</a> </span>
             </div>
         </div>
 
@@ -413,9 +360,7 @@
                 <p>
                     Stay up-to-date with our latest news and events! We promise not to spam you!
                 </p>
-            </div>
-
-
+              </div>
             <div class="newsletterForm">
                 <input type="text" placeholder="Your name">
                 <input placeholder="youremail@example.com" type="email" name="" id="">
@@ -444,8 +389,8 @@
             <div class="join">
                 <h1>JOIN US</h1>
                 <ul>
-                    <li><a href="">AS MEMBER</a></li>
-                    <li><a href="">THE VOLUNTEER</a></li>
+                    <li><a href="http://bit.ly/teamphotowaka">AS MEMBER</a></li>
+                    <li><a href="http://bit.ly/teamphotowaka">THE VOLUNTEER</a></li>
                 </ul>
             </div>
         </div>
@@ -466,7 +411,7 @@ $(".burger").on(
         $($( $(".burger").children()[0]).children()[2]).toggleClass("hideBurger")
 
     }
-)
+);
 </script>
 </body>
 </html>

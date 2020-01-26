@@ -1,8 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    // font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 100;
+    line-height: 1.8em;
     
 
 
@@ -49,7 +51,6 @@ body{
             display: grid;
             grid-template-columns: 60% 1fr;
             margin: 10em 0;
-
 
             .showcaseHeading{
                 padding-top: 20vh;
@@ -123,7 +124,7 @@ body{
         .core{
             margin: 15em 0;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
 
 
             .coreCard{
@@ -138,7 +139,6 @@ body{
                     height: 130%;
                     content: "";
                     position: absolute;
-                    border: 0.8px solid $mainYellow;
                     border-radius: 10px;
                     display: block;
                     top: 15%;
@@ -148,7 +148,7 @@ body{
                 h1{
                 
                     color: $mainYellow;
-                    text-shadow: 1px 1px 4px rgba(234, 188, 4, 0.589);
+                    // text-shadow: 1px 1px 4px rgba(234, 188, 4, 0.589);
                     font-size: 1.8em;
                     font-weight: lighter;
                     margin-bottom: 1.4em
@@ -237,6 +237,31 @@ body{
                     }
                 }
             }
+
+            .coreCard:nth-child(4){
+
+              .coreCardImg{
+                  border: 10px solid white;
+                  width: 90px;
+                  margin: 0 auto;
+                  height: 90px;
+                  border-radius: 1200px;
+                  background: $mainYellow;
+                  display: block;
+
+                  &::before{
+                      width: 100%;
+                      height: 100%;
+                      content: "";
+                      display: block;
+                      background: url("../asset/collaborate.svg");
+                      background-size: contain;
+                      background-position: center;
+                      transform: scale(0.5);
+                      background-repeat: no-repeat
+                  }
+              }
+          }
         }
 
 
@@ -244,14 +269,14 @@ body{
             background-color: #EABC04;
             height: 110vh;
             display: grid;
-            border-radius: 0px 0px 90vh 90vh;
+            // border-radius: 0px 0px 90vh 90vh;
             grid-template-columns:  1fr 1.3fr;
             
 
             .founderImg{
                 width: 70vh;
                 height:  70vh;
-                background: linear-gradient(rgba(255, 255, 255, 0.192), rgba(234, 188, 4, 0.507)), url("../asset/founderIMG.jpg");
+                background: linear-gradient(rgba(255, 255, 255, 0.192), rgba(234, 188, 4, 0.507)), url('../asset/groupPhoto.jpeg');
                 background-size: cover;
                 border-radius: 1000px;
                 margin: 3em auto 1em auto;
@@ -479,22 +504,6 @@ body{
                     position: relative;
                     margin-bottom: 0.8em;
                     color: #424141;
-
-                    &::before{
-                        content: ' " ';
-                        width: 30px;
-                        height: 30px;
-                        font-family: 'Ruge Boogie', cursive;
-                        font-size: 18em;
-                        position: absolute;
-                        color: $mainYellow;
-                        top: -282%;
-                        right: 50%;
-                        z-index: 0.1;
-                        opacity: 0.3;
-                        display: block;
-                    }
-
                 }
 
                 p{
@@ -564,7 +573,7 @@ body{
             margin: 0 auto;
             display: block;
             height: 35em;
-            background: linear-gradient(rgba(255, 255, 255, 0.637), rgba(234, 188, 4, 0.63)), url("../asset/founderBehond.JPG");
+            background: linear-gradient(rgba(255, 255, 255, 0.637), rgba(234, 188, 4, 0.63)), url("../asset/teamPhoto.jpg");
             background-position: center;
             background-size: cover;
             clip-path: polygon(0 0, 82% 16%, 78% 100%, 0 100%, 0% 38%);
@@ -573,7 +582,11 @@ body{
 
         .actionCardText{
             padding-top: 20vh;
-
+            a { 
+              text-decoration: none;
+              color: #EABC04;
+              font-weight: bold;
+            }
             h1{
                 font-weight: 900;
                 font-size: 2.7em;
@@ -1195,7 +1208,7 @@ body{
                 display: block;
 
                 .coreCard{
-                    margin-bottom: 12em;
+                    margin-bottom: 6em;
                 }
             }
 

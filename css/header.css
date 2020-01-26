@@ -6,7 +6,6 @@ header {
   left: 0;
   z-index: 3;
   border-bottom: 1.3px solid #EABC04;
-  margin-bottom: 2em;
 }
 
 header nav {
@@ -94,30 +93,23 @@ header nav .navItems ul li:nth-child(2) ul li a {
   margin: 1em 0;
 }
 
-header nav .navItems ul li:nth-child(5) {
+header nav .navItems ul a:nth-child(5) {
   position: relative;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;
-}
-
-header nav .navItems ul li:nth-child(5) a {
+  text-decoration: none;
   color: #EABC04;
   font-weight: bold;
 }
 
-header nav .navItems ul li:nth-child(5):hover {
+header nav .navItems ul a:nth-child(5):hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  color: white;
 }
 
-header nav .navItems ul li:nth-child(5):hover a {
-  color: white;
-}
-
-header nav .navItems ul li:nth-child(5)::before {
+header nav .navItems ul a:nth-child(5)::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -247,6 +239,8 @@ header .mobileNav {
     width: 100%;
     text-align: right;
     cursor: pointer;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   header .mobileNav .burger .burgerItems {
     padding-left: 0;
